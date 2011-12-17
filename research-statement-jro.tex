@@ -1,0 +1,100 @@
+\documentclass[10pt]{article}
+\usepackage{anysize}
+\marginsize{1in}{1in}{.5in}{.5in}
+\pagenumbering{arabic}
+\usepackage{setspace}
+\usepackage[usenames]{color}
+\usepackage[fleqn]{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{verbatim}
+\usepackage{indentfirst}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{tabulary}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{ifthen}
+
+\usepackage[round]{natbib}
+\bibliographystyle{evolution}
+
+\pagestyle{fancy}
+\lhead{\ifthenelse{\value{page}=1}{}{\sffamily\footnotesize Jamie Oaks}}
+\chead{\ifthenelse{\value{page}=1}{{\scshape Research Statement} \\ Jamie Richard Oaks}{\sffamily\footnotesize Research Statement}}
+\rhead{\ifthenelse{\value{page}=1}{}{\sffamily\footnotesize \today}}
+\cfoot{\sffamily\footnotesize Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%\renewcommand{\headheight}{14pt}
+
+\newcommand{\ignore}[1]{}
+\newcommand{\addTail}[1]{\textit{#1}.---}
+\newcommand{\super}[1]{\ensuremath{^{\textrm{#1}}}}
+\newcommand{\sub}[1]{\ensuremath{_{\textrm{#1}}}}
+\newcommand{\dC}{\ensuremath{^\circ{\textrm{C}}}}
+\makeatletter
+  \renewcommand{\section}{\@startsection{section}{1}{0mm}%
+    {-8pt}%
+    {2pt}%
+   {\bfseries\large}}
+\makeatother
+
+\makeatletter
+  \renewcommand{\subsection}{\@startsection{subsection}{1}{0mm}%
+  {-12pt}%
+  {2pt}%
+  {\bfseries\itshape}}
+\makeatother
+
+\makeatletter
+  \renewcommand{\subsubsection}{\@startsection{subsubsection}{1}{0mm}%
+  {-12pt}%
+  {0pt}%
+  {\raggedleft\addTail}}
+\makeatother
+
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+
+\renewcommand{\labelitemi}{$\circ$}
+
+\newenvironment{myEnumerate}{
+  \begin{enumerate}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}}
+  {\end{enumerate}}
+
+\newenvironment{myItemize}{
+  \begin{itemize}
+    \setlength{\leftskip}{-5mm}
+    \setlength{\itemsep}{1pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}}
+  {\end{itemize}}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+\begin{document}
+\raggedright
+\setlength{\parindent}{0in}
+\singlespacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Previous \& Current Research}
+%%%%%%%%%%%
+
+\section*{Future Research}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
