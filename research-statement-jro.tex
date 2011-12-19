@@ -24,8 +24,11 @@
 \usepackage{fancyhdr}
 \usepackage{ifthen}
 
-\usepackage[round]{natbib}
-\bibliographystyle{evolution}
+%\usepackage[round]{natbib}
+%\bibliographystyle{evolution}
+%\usepackage[style=footnote-dw]{biblatex}
+\usepackage[style=footnote-dw, natbib=true, sortcites=true, block=space, url=false, doi=false, firstinits=true]{biblatex}
+\bibliography{references}
 
 %% Format headers and footers %%%%%%%%%%%%%%%%%%%%
 \pagestyle{fancy}
@@ -89,6 +92,7 @@
 \newcommand{\sub}[1]{\ensuremath{_{\textrm{#1}}}}
 \newcommand{\dC}{\ensuremath{^\circ{\textrm{C}}}}
 \newcommand{\tableSubItem}{\addtolength{\leftskip}{1em} \labelitemi \xspace}
+\newcommand{\myHangIndent}{\hangindent=5mm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -97,14 +101,76 @@
 \raggedright
 \singlespacing
 
-My research focuses on understanding the processes that generate and maintain biodiversity.
-development, implementation, and application of model-based phylogenetic and phylogeographic models.
+What historical and ecological processes shape genetic variation both temporally and spatially, partition evolutionary lineages, and generate and maintain biodiversity?
+Elucidating this question is the primary motivation of my research program.
+To address this question, I use patterns of DNA sequence variation within and among species to identify independent evolutionary lineages (i.e., species) and infer their demographic histories and relationships.
+To do this as robustly as possible, my research also strongly focuses on the development, implementation, and application of model-based phylogenetic and phylogeographic models.
 
 \section*{Previous \& Current Research}
-%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Diversification of Crocodiles}
+Traditionally, crocodiles (\emph{Crocodylus}) were stereotyped as an ancient group of ``living fossils'' that originated in Africa prior to the fragmentation of Pangea; their diversity and circumtropical distribution was attributed to continental drift.
+However, early molecular data and subsequent reassessment of paleontological data suggested the genus could be younger than previously believed.
+Recently, I used a large multi-locus molecular dataset of all extant crocodylian species and novel statistical phylogenetic methods to infer the temporal and biogeographical origin of \emph{Crocodylus}.
+My results overturned traditional views of crocodiles as ``living-fossils'' from Africa, revealing a recent and dynamic evolutionary history \cite{Oaks2011}.
+My results strongly support that all extant crocodiles originated from a common ancestor in the tropics of the Serravallian or Tortonian Indo-Pacific, approximately 14--8 million years ago.
+The genus rapidly radiated and dispersed around the globe, undergoing multiple transoceanic dispersals, after the mid-Miocene climatic optimum when global cooling was causing massive extinctions of fellow crocodylians.
+My findings also revealed more species diversity within the \emph{Crocodylus} than is recognized by current taxonomy.
+
+This study also resulted in important methodological innovations.
+First time-calibrated species tree\ldots
+First to use posterior sample of species trees to infer the the evolution of characters\ldots
+Also, to accommodate the variation of substitution rates among DNA sites in the alignment, I used a novel approach of estimating the optimal model of partitioning the alignment.
+I showed that such partitioned models perform far better than traditional models that partition based on a priori expectations \cite{OaksInPrep}.
+
+\subsection*{Climate Driven Diversification}
+intro philippines
+
+cyrt and gecko papers
+
+more appropriate way to test model
+
+intro msbayes
+
+paic paper
+
+new BEAST model
+
+cyrt and gecko genomics
+
+I am a developer of the Bayesian evolutionary genetics software package, BEAST (\url{http://code.google.com/p/beast-mcmc/}).
+
+\subsection*{Simultaneous Estimation of Population History and Structure: A Novel Approach}
+A better and more powerful approach would be to integrate these two steps and make population assignment a random variable estimated during the inference of the population tree.
+A nonparametric Bayesian MCMC method treating population assignment as a random variable under a discrete prior distribution would offer a way to do this.
+There are several probability distributions (e.g. Dirichlet process, Pitman-Yor process, and uniform process) commonly used as priors in Bayesian nonparametric statistics in situations such as this, where we are assigning random variables (gene copies) to groups (populations).
+We will develop an implementation of this method by incorporating additional MCMC proposal mechanisms into the software package *BEAST.
+We will use a Gibbs sampling scheme for the MCMC that numerically integrates over the possible population number and assignments.
+This sampling procedure entails picking a gene copy, removing it from its current population and re-assigning it to one of the other populations or a new population according to probabilities calculated using the likelihood function of the *BEAST model and the current states of other parameters.
+This procedure will be repeated, sweeping across all gene copies, resulting in a newly proposed population structure.
+As with all other proposals, acceptance as the next state in the Markov chain will be governed by the Metropolis-Hastings algorithm.
+
+\subsection*{implementing a comparative biogeographical model}
+BEAST implements a Bayesian multispecies coalescent model that jointly estimates multiple gene trees and the shared species tree in which they evolve.
+In this model, the divergence times (node heights of the rooted, ultrametric species tree) are among the parameters that are jointly estimated.
+I will start working on a Dirichlet process model that will treat the clustering of the divergence times as a random variable.
+This will allow the estimation of how many divergence ``events'' are represented across the species tree, the timing of them, and the assignment of nodes to the divergence events, all while integrating over uncertainty in the substitution and coalescent processes, the gene trees, and the species tree.
+The goal is to be able to infer the pattern of divergence times across a species tree, and test whether certain divergences are more clustered then expected by chance.
+
+This model will have several advantages over the approximate Bayesian computation package msBayes, which has several weaknesses:
+1) taxa must be paired, 
+2) must assume relative mutation rates across taxa, and 
+3) data are distilled into summary statistics to approximate the posterior of the model without a likelihood function.
+The model I will implement in BEAST will allow us to take advantage of the full information in the sequence data, because the posterior probability distributions of the model parameters will be inferred jointly and directly from the sequence data.
+By having a fully phylogenetic framework, we are able to use the information in the data to infer the mutation rates across the tree using rigorous relaxed clock models already implemented in BEAST.
+This way relative rates in different parts of each gene tree are inferred from the data rather than assumed.
+Also by having a fully phylogenetic framework, we can infer more complicated patterns of divergence timing than is possible with simply comparing taxon-pairs.
 
 \section*{Future Research}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+species delim in BEAST\ldots
+
+diversification and adaptation on continental islands of Sundaland\ldots
 
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
