@@ -60,7 +60,8 @@
     {\sffamily\bfseries}
     {\S\ \thesection.}{.5em}{}[.---]
 \titlespacing{\subsubsection}
-    {\parindent}{1.0ex plus .1ex minus .1ex}{0pt}
+    {\parindent}{0pt}{0pt}
+%    {\parindent}{1.0ex plus .1ex minus .1ex}{0pt}
 
 %% Format list environments %%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
@@ -103,95 +104,96 @@
 
 \emph{What historical and ecological processes shape genetic variation both temporally and spatially, partition evolutionary lineages, and generate and maintain biodiversity?}
 Elucidating this question is the primary motivation of my research program.
-To address this question, I use patterns of DNA sequence variation within and among species to identify independent evolutionary lineages (i.e., species) and infer their demographic histories and relationships, looking for correlations with current ecological factors and historical events.
-To do this as robustly as possible, my research also strongly focuses on the development, implementation, and application of phylogenetic and phylogeographic models.
+To address this question, I use patterns of DNA sequence variation within and among species to identify independent evolutionary lineages (i.e., species) and infer their demographic histories and relationships, testing for patterns predicted by current ecological factors and historical events.
+To do this as robustly as possible, my research also strongly focuses on the development, implementation, and application of phylogenetic and phylogeographic models of evolution.
 
 \section*{Previous \& Current Research}
 %%%%%%%%%%%%%%%%%%%%%
 \subsection*{Diversification of Crocodiles}
-Traditionally, crocodiles (\emph{Crocodylus}) were stereotyped as an ancient group of ``living fossils'' that originated in Africa prior to the fragmentation of Pangea; their diversity and circumtropical distribution was attributed to continental drift.
+Traditionally, crocodiles (\emph{Crocodylus}) have been stereotyped as an ancient group of ``living fossils'' that originated in Africa prior to the fragmentation of Pangea; their diversity and circumtropical distribution was attributed to vicariance via continental drift.
 However, early molecular data and subsequent reassessment of paleontological data suggested the genus could be younger than previously believed.
-Recently, I used a large multi-locus molecular dataset of all extant crocodylian species and novel statistical phylogenetic methods to infer the temporal and biogeographical origin of \emph{Crocodylus}.
+Recently, I collected a large multi-locus molecular dataset of all extant crocodylian species and used novel statistical phylogenetic methods to infer the temporal and biogeographical origin of \emph{Crocodylus}.
 My results overturned traditional views of crocodiles as ``living-fossils'' from Africa, revealing a recent and dynamic evolutionary history \cite{Oaks2011}.
-My results strongly support that all extant crocodiles originated from a common ancestor in the tropics of the Serravallian or Tortonian Indo-Pacific, approximately 14--8 million years ago (mya).
-The genus rapidly radiated and dispersed around the globe, undergoing multiple transoceanic dispersals, after the mid-Miocene climatic optimum when global cooling was causing massive extinctions of fellow crocodylians.
-My findings also revealed more species diversity within the \emph{Crocodylus} than is recognized by current taxonomy.
+My results strongly support that all extant crocodiles shared a common ancestor from the tropics of the Indo-Pacific, approximately 14--8 million years ago (mya), rejecting an ancient vicariant explanation of their biogeography in favor of a recent, dispersal-mediated model involving multiple transoceanic dispersals.
+It was not until after the mid-Miocene climatic optimum, when the global climate was cooling and fellow crocodylian lineages were suffering massive extinctions, that \emph{Crocodylus} radiated and dispersed around the globe.
+This finding suggests it was not only global cooling driving the extinction of other crocodylians, as previously believed, but also competition with the rapidly radiating \emph{Crocodylus} lineage.
+My results also revealed more species diversity within the \emph{Crocodylus} than currently recognized.
 
-This study also resulted in important methodological innovations.
+This study also introduced important methodological innovations.
 To accommodate the variation of substitution rates among DNA sites in the alignment, I used a novel approach of estimating the optimal model for partitioning the alignment.
-The resulting models performed far better than traditional models that partition based on a priori expectations \cite{OaksInPrep}.
-This has important implications, because improving the modeling among-site rate variation will mitigate the underestimation of long branches and concomitant systematic error in phylogenetic estimates (e.g., long-branch attraction).
-Furthermore, the estimated phylogeny was among the first time-calibrated species tree inferred under a multi-species coalescent model, and was the first to use a posterior sample of species trees to estimate ancestral-state reconstructions
+The resulting models performed far better than traditional models that partition based on \emph{a priori} expectations \cite{OaksInPrep}.
+This has important implications, because improved modeling of among-site rate variation will mitigate the underestimation of long branches and concomitant systematic error in phylogenetic estimates (e.g., long-branch attraction).
+Furthermore, the estimated phylogeny was among the first time-calibrated species tree inferred under a multi-species coalescent model, and was the first to use a posterior sample of species trees to estimate ancestral-state reconstructions.
+The species trees represent direct estimates of the evolutionary history of the species, rather than a proxy estimate of the history of individual gene copies.
+A direct representation of the species tree is ideal when inferring the evolutionary patterns of species-level characters, like ancestral ranges.
 
 \subsection*{Climate-Driven Diversification}
-The main focus of my current research seeks to determine whether Late Pliocene and Pleistocene climate oscillations promoted diversification by fragmenting the distributions of species.
+The main focus of my current research seeks to determine whether Late Pliocene and Pleistocene climatic oscillations promoted diversification by fragmenting the distributions of species.
 An ideal model system for such research exists in the complex system of island archipelagos in Southeast Asia.
-The Southeast Asian mainland and complex system of 26,000\+ islands experienced dramatic, cyclical shifts in the extent of terrestrial landscape during recent glacial cycles.
-Many groups of islands in this region coalesced into aggregated islands during glacial periods when sea levels were up to 120m below current level.
-These aggregated islands where repeatedly fragmented into groups of islands during interglacial highstands.
+The Southeast Asian mainland and complex system of 26,000\+ islands experienced dramatic cyclical shifts in the extent of the terrestrial landscape during recent glacial cycles.
+Many groups of islands in this region coalesced into aggregated islands during glacial periods when sea levels were up to 120m below current level; these aggregated islands where repeatedly fragmented during interglacial highstands.
 
 The repeated formation and fragmentation of these Pleistocene aggregate island complexes (PAICs) has been best characterized in the 7100\+ islands of the Philippines, where it has become a prominent paradigm for understanding the biodiversity of the archipelago.
 The PAIC model has most commonly been used to delineate areas of endemism across the Philippines, but has also been hypothesized to have increased the biodiversity of the islands by promoting speciation during island fragmentation.
-To assess the validity of the PAIC model of diversification, Collaborators and I have been studying the evolutionary history of two genera of geckoes (\emph{Cyrtodactylus} and \emph{Gekko}) that are co-distributed across most of the islands \cite{Siler2010}\super{,}\cite{Siler2012}.
-While PAIC islands did explain a significant proportion of the genetic diversity, populations from PAIC islands were not monophyletic, and there was no obvious pattern of diversification associated with the Pleistocene.
-We revealed a complex and dynamic histories for both genera that contradict many of the the traditional PAIC model predictions.
+To assess the validity of the PAIC model of diversification, Collaborators and I have been studying the evolutionary history of two genera of geckos (\emph{Cyrtodactylus} and \emph{Gekko}) that are co-distributed across most of the islands of the Philippines\cite{Siler2010}\super{,}\cite{Siler2012}.
+We found that PAIC islands did explain a significant proportion of the genetic diversity, but populations from PAIC islands were not monophyletic, and there was no obvious pattern of diversification associated with the Pleistocene.
+We revealed complex histories for both genera that contradict many of the the traditional PAIC model predictions.
 Interestingly, for \emph{Gekko}, we found evidence that the genus colonized the Philippines by ``rafting'' on the Palawan Microcontinental Islands that rifted away from Mainland Asia and drifted towards the rest of the Philippine Archipelago between 30--10 mya.
 
-Recognizing that the shallow timescale of the PAIC cycles is not necessarily conducive to traditional phylogenetic investigations, we also addressed the PAIC diversification hypothesis using a comparative, coalescent-based approach.
+Recognizing that the shallow timescale of the PAIC cycles is not necessarily conducive for traditional phylogenetic investigations, we also addressed the PAIC diversification hypothesis using a comparative, coalescent-based approach \cite{Oaks2012}.
 If repeated bouts of island connectivity and isolation promoted diversification, the temporal distribution of divergences between inter-island populations within PAICs should be temporally clustered and correspond with interglacial rises in sea level.
 To test this prediction, we accumulated genetic data from 22 distantly related pairs of populations, representing five orders of terrestrial vertebrates.
 Each pair of populations is currently on two separate islands that were historically connected during glacial periods.
-We inferred the distribution of divergence times across the 22 pairs of populations using a popular approximate Bayesian computation method implemented in a software package called msBayes.
-We found very strong support (posterior probability of 0.982) for a recent simultaneous divergence event shared by all 22 taxa.
-Rather than interpret this result as strong support of climate-driven diversification, I performed extensive simulation-based analyses to assess the performance of the msBayes method.
-The results of the simulations revealed the method lacked power and is biased towards inferring ``simultaneous'' divergence; we were likely to have inferred simultaneous divergence even if the 22 population pairs had randomly diverged over the past 3--2 million years.
-Thus, despite our seemingly strong support, the msBayes method could not say anything about PAIC model hypothesis.
+We inferred the distribution of divergence times across the 22 pairs of populations using a popular approximate Bayesian computation (ABC) method implemented in a software package called msBayes.
+We found very strong support (posterior probability of 0.982) for a recent, simultaneous divergence event shared by all 22 taxa.
 
-cyrt and gecko papers
+Rather than interpret this support for simultaneous divergence across the 22 taxa as strong evidence of climate-driven diversification, I performed extensive simulation-based analyses to assess the ability of the msBayes method to detect variation in divergence times.
+The results of the simulations revealed that msBayes has low power and is biased towards inferring ``simultaneous'' divergence; we were likely to have inferred simultaneous divergence even if the 22 population pairs had randomly diverged over the past 3--2 million years.
+This finding is important, because msBayes is a popular method, and inferences of clustered divergence times across co-distributed taxa has often been interpreted as evidence for a shared historical event in the literature.
+Our results demonstrate that the method can be biased towards such results, and the interpretation of a shared event is not warranted without simulation-based validation of the methods performance.
 
-more appropriate way to test model
+Given that we have exhausted currently available methods using moderate-sized datasets, I am currently using an integrative approach to better assess the Pleistocene-diversification hypothesis.  Concurrently, I am  1) collecting genome-scale data from dense sampling of \emph{Cyrtodactylus} and \emph{Gekko} from across the Philippine Archipelago using next-generation sequencing technology, and 2) implementing a more powerful comparative phylogeographic method for inferring the temporal distribution of divergences within a fully Bayesian multi-species coalescent framework.
 
-intro msbayes
+\subsubsection*{1) Next-generation sequencing of \emph{Cyrtodactylus} and \emph{Gekko}}
+I am currently collecting genomic sequence data at low-level coverage from a small subset of our gecko samples using Illumina TruSeq SBS sequencing chemistry.
+The goal is to use the resulting genomic data to design probes for 200 effectively unlinked, single-copy loci from across the genome to allow enrichment of these targets for next-gen sequencing across all the samples.
+Collecting hundreds of unlinked loci will give us much more power to infer demographic parameters using coalescent-based methods.
 
-paic paper
-
-new BEAST model
-
-cyrt and gecko genomics
-
-I am a developer of the Bayesian evolutionary genetics software package, BEAST (\url{http://code.google.com/p/beast-mcmc/}).
-
-\subsection*{Simultaneous Estimation of Population History and Structure: A Novel Approach}
-A better and more powerful approach would be to integrate these two steps and make population assignment a random variable estimated during the inference of the population tree.
-A nonparametric Bayesian MCMC method treating population assignment as a random variable under a discrete prior distribution would offer a way to do this.
-There are several probability distributions (e.g. Dirichlet process, Pitman-Yor process, and uniform process) commonly used as priors in Bayesian nonparametric statistics in situations such as this, where we are assigning random variables (gene copies) to groups (populations).
-We will develop an implementation of this method by incorporating additional MCMC proposal mechanisms into the software package *BEAST.
-We will use a Gibbs sampling scheme for the MCMC that numerically integrates over the possible population number and assignments.
-This sampling procedure entails picking a gene copy, removing it from its current population and re-assigning it to one of the other populations or a new population according to probabilities calculated using the likelihood function of the *BEAST model and the current states of other parameters.
-This procedure will be repeated, sweeping across all gene copies, resulting in a newly proposed population structure.
-As with all other proposals, acceptance as the next state in the Markov chain will be governed by the Metropolis-Hastings algorithm.
-
-\subsection*{implementing a comparative biogeographical model}
-BEAST implements a Bayesian multispecies coalescent model that jointly estimates multiple gene trees and the shared species tree in which they evolve.
+\subsubsection*{2) Implementing a fully Bayesian comparative phylogeographic model}
+The evolutionary genetics software package, BEAST (\url{http://code.google.com/p/beast-mcmc/}), implements a Bayesian multi-species coalescent model that jointly estimates multiple gene trees and the shared species tree in which they evolve.
 In this model, the divergence times (node heights of the rooted, ultrametric species tree) are among the parameters that are jointly estimated.
-I will start working on a Dirichlet process model that will treat the clustering of the divergence times as a random variable.
-This will allow the estimation of how many divergence ``events'' are represented across the species tree, the timing of them, and the assignment of nodes to the divergence events, all while integrating over uncertainty in the substitution and coalescent processes, the gene trees, and the species tree.
+As a developer for BEAST, I am working on a reversible-jump Markov chain Monte Carlo (MCMC) method that will co-estimate the number of divergence ``events'' represented across the species tree, the timing of them, and the assignment of nodes to the divergence events, all while integrating over uncertainty in the substitution and coalescent processes, gene trees, and species tree.
 The goal is to be able to infer the pattern of divergence times across a species tree, and test whether certain divergences are more clustered then expected by chance.
 
-This model will have several advantages over the approximate Bayesian computation package msBayes, which has several weaknesses:
-1) taxa must be paired, 
-2) must assume relative mutation rates across taxa, and 
-3) data are distilled into summary statistics to approximate the posterior of the model without a likelihood function.
-The model I will implement in BEAST will allow us to take advantage of the full information in the sequence data, because the posterior probability distributions of the model parameters will be inferred jointly and directly from the sequence data.
-By having a fully phylogenetic framework, we are able to use the information in the data to infer the mutation rates across the tree using rigorous relaxed clock models already implemented in BEAST.
-This way relative rates in different parts of each gene tree are inferred from the data rather than assumed.
-Also by having a fully phylogenetic framework, we can infer more complicated patterns of divergence timing than is possible with simply comparing taxon-pairs.
+This model will have several advantages over the ABC method of msBayes.
+It will take advantage of the full information in the sequence data by estimating the posterior probability distributions of the model parameters directly from the sequence data, avoiding the loss of information suffered by ABC when distilling the data into summary statistics.
+The new method will estimate the relative mutation rates across the species tree using rigorous relaxed-clock models already implemented in BEAST.
+This will provide more accurate estimates of species divergence than msBayes, which assumes mutation rates are equal across taxa.
+Also, by using a fully phylogenetic framework, we can infer more complicated patterns of divergence times than is possible with msBayes, which is restricted to comparing pairs of taxa.
 
 \section*{Future Research}
 %%%%%%%%%%%%%%%
-species delim in BEAST\ldots
+\subsection*{Simultaneous Estimation of Population History and Structure: A Novel Approach}
+Currently, the inference of species trees from multi-locus genetic data collected at a phylogeographic scale is typically conducted in a two-step process.
+First, the investigator must estimate how many populations (or species) are represented in their sample, and the assignment of individuals to those populations.
+This is typically done using some variant of genetic clustering algorithm.
+Second, the relationships among the resulting clusters is then inferred under a multi-species coalescent model.
+The reason this two-step process is currently required is because current implementations of multi-species coalescent models assume the population assignment is known without error, and is fixed during the analysis.
+This assumption is often unrealistic for empirical data, because it is often difficult to diagnose cryptic, independent evolutionary lineages with complete certainty.
+Another potential problem with this approach is that the genetic clustering methods simply group individuals based on allele frequencies, and do not use the information contained in the sequence data about the genealogical history of the alleles; using such information is a major strength of coalescent-based methods.
+Thus, initially inferring the population assignments using allele-frequency-based methods does not make full use of the sequence data and is more likely to lead to erroneous results.
 
-diversification and adaptation on continental islands of Sundaland\ldots
+A more robust approach would be to integrate these two steps and make population assignment a random variable estimated during the inference of the population tree.
+I will collaborate with Mark Holder to develop a method to do this using a nonparametric Bayesian MCMC method that treats population assignment as a random variable under a discrete prior distribution.
+There are several probability distributions (e.g. Dirichlet process, Pitman-Yor process, and uniform process) commonly used as priors in Bayesian nonparametric statistics in situations such as this, where we need to estimate the assignment of random variables (gene copies) to groups (populations).
+We will implement this method by incorporating a Gibbs sampling proposal mechanisms into the BEAST MCMC algorithm that numerically integrates over the possible numbers of populations and individual assignments.
+%This sampling procedure entails picking a gene copy, removing it from its current population and re-assigning it to one of the other populations or a new population according to probabilities calculated using the likelihood function of the *BEAST model and the current states of other parameters.
+%This procedure will be repeated, sweeping across all gene copies, resulting in a newly proposed population structure.
+%As with all other proposals, acceptance as the next state in the Markov chain will be governed by the Metropolis-Hastings algorithm.
+This software tool will benefit a broad community of researchers conducting phylogeographic analyses, and plan to propose the project to the NSF Division of Environmental Biology (DEB) Phylogenetic Systematics Program to secure funds for the necessary computational resources.
+
+\subsection*{Diversification and Adaptation of Lizards on Continental Islands of the Sunda Shelf}
+
 
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
