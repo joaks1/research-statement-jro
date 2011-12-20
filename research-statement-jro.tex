@@ -101,10 +101,10 @@
 \raggedright
 \singlespacing
 
-What historical and ecological processes shape genetic variation both temporally and spatially, partition evolutionary lineages, and generate and maintain biodiversity?
+\emph{What historical and ecological processes shape genetic variation both temporally and spatially, partition evolutionary lineages, and generate and maintain biodiversity?}
 Elucidating this question is the primary motivation of my research program.
-To address this question, I use patterns of DNA sequence variation within and among species to identify independent evolutionary lineages (i.e., species) and infer their demographic histories and relationships.
-To do this as robustly as possible, my research also strongly focuses on the development, implementation, and application of model-based phylogenetic and phylogeographic models.
+To address this question, I use patterns of DNA sequence variation within and among species to identify independent evolutionary lineages (i.e., species) and infer their demographic histories and relationships, looking for correlations with current ecological factors and historical events.
+To do this as robustly as possible, my research also strongly focuses on the development, implementation, and application of phylogenetic and phylogeographic models.
 
 \section*{Previous \& Current Research}
 %%%%%%%%%%%%%%%%%%%%%
@@ -113,18 +113,39 @@ Traditionally, crocodiles (\emph{Crocodylus}) were stereotyped as an ancient gro
 However, early molecular data and subsequent reassessment of paleontological data suggested the genus could be younger than previously believed.
 Recently, I used a large multi-locus molecular dataset of all extant crocodylian species and novel statistical phylogenetic methods to infer the temporal and biogeographical origin of \emph{Crocodylus}.
 My results overturned traditional views of crocodiles as ``living-fossils'' from Africa, revealing a recent and dynamic evolutionary history \cite{Oaks2011}.
-My results strongly support that all extant crocodiles originated from a common ancestor in the tropics of the Serravallian or Tortonian Indo-Pacific, approximately 14--8 million years ago.
+My results strongly support that all extant crocodiles originated from a common ancestor in the tropics of the Serravallian or Tortonian Indo-Pacific, approximately 14--8 million years ago (mya).
 The genus rapidly radiated and dispersed around the globe, undergoing multiple transoceanic dispersals, after the mid-Miocene climatic optimum when global cooling was causing massive extinctions of fellow crocodylians.
 My findings also revealed more species diversity within the \emph{Crocodylus} than is recognized by current taxonomy.
 
 This study also resulted in important methodological innovations.
-First time-calibrated species tree\ldots
-First to use posterior sample of species trees to infer the the evolution of characters\ldots
-Also, to accommodate the variation of substitution rates among DNA sites in the alignment, I used a novel approach of estimating the optimal model of partitioning the alignment.
-I showed that such partitioned models perform far better than traditional models that partition based on a priori expectations \cite{OaksInPrep}.
+To accommodate the variation of substitution rates among DNA sites in the alignment, I used a novel approach of estimating the optimal model for partitioning the alignment.
+The resulting models performed far better than traditional models that partition based on a priori expectations \cite{OaksInPrep}.
+This has important implications, because improving the modeling among-site rate variation will mitigate the underestimation of long branches and concomitant systematic error in phylogenetic estimates (e.g., long-branch attraction).
+Furthermore, the estimated phylogeny was among the first time-calibrated species tree inferred under a multi-species coalescent model, and was the first to use a posterior sample of species trees to estimate ancestral-state reconstructions
 
-\subsection*{Climate Driven Diversification}
-intro philippines
+\subsection*{Climate-Driven Diversification}
+The main focus of my current research seeks to determine whether Late Pliocene and Pleistocene climate oscillations promoted diversification by fragmenting the distributions of species.
+An ideal model system for such research exists in the complex system of island archipelagos in Southeast Asia.
+The Southeast Asian mainland and complex system of 26,000\+ islands experienced dramatic, cyclical shifts in the extent of terrestrial landscape during recent glacial cycles.
+Many groups of islands in this region coalesced into aggregated islands during glacial periods when sea levels were up to 120m below current level.
+These aggregated islands where repeatedly fragmented into groups of islands during interglacial highstands.
+
+The repeated formation and fragmentation of these Pleistocene aggregate island complexes (PAICs) has been best characterized in the 7100\+ islands of the Philippines, where it has become a prominent paradigm for understanding the biodiversity of the archipelago.
+The PAIC model has most commonly been used to delineate areas of endemism across the Philippines, but has also been hypothesized to have increased the biodiversity of the islands by promoting speciation during island fragmentation.
+To assess the validity of the PAIC model of diversification, Collaborators and I have been studying the evolutionary history of two genera of geckoes (\emph{Cyrtodactylus} and \emph{Gekko}) that are co-distributed across most of the islands \cite{Siler2010}\super{,}\cite{Siler2012}.
+While PAIC islands did explain a significant proportion of the genetic diversity, populations from PAIC islands were not monophyletic, and there was no obvious pattern of diversification associated with the Pleistocene.
+We revealed a complex and dynamic histories for both genera that contradict many of the the traditional PAIC model predictions.
+Interestingly, for \emph{Gekko}, we found evidence that the genus colonized the Philippines by ``rafting'' on the Palawan Microcontinental Islands that rifted away from Mainland Asia and drifted towards the rest of the Philippine Archipelago between 30--10 mya.
+
+Recognizing that the shallow timescale of the PAIC cycles is not necessarily conducive to traditional phylogenetic investigations, we also addressed the PAIC diversification hypothesis using a comparative, coalescent-based approach.
+If repeated bouts of island connectivity and isolation promoted diversification, the temporal distribution of divergences between inter-island populations within PAICs should be temporally clustered and correspond with interglacial rises in sea level.
+To test this prediction, we accumulated genetic data from 22 distantly related pairs of populations, representing five orders of terrestrial vertebrates.
+Each pair of populations is currently on two separate islands that were historically connected during glacial periods.
+We inferred the distribution of divergence times across the 22 pairs of populations using a popular approximate Bayesian computation method implemented in a software package called msBayes.
+We found very strong support (posterior probability of 0.982) for a recent simultaneous divergence event shared by all 22 taxa.
+Rather than interpret this result as strong support of climate-driven diversification, I performed extensive simulation-based analyses to assess the performance of the msBayes method.
+The results of the simulations revealed the method lacked power and is biased towards inferring ``simultaneous'' divergence; we were likely to have inferred simultaneous divergence even if the 22 population pairs had randomly diverged over the past 3--2 million years.
+Thus, despite our seemingly strong support, the msBayes method could not say anything about PAIC model hypothesis.
 
 cyrt and gecko papers
 
