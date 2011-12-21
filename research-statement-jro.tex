@@ -19,10 +19,12 @@
 \usepackage[normalem]{ulem}
 \usepackage{hyperref}
 \hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue, linkcolor=black}
+\usepackage[format=plain, labelsep=period, justification=raggedright, singlelinecheck=true, skip=2pt, font={footnotesize,sf}, labelfont=bf]{caption}
 \usepackage{titlesec}
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \usepackage{ifthen}
+\usepackage{wrapfig}
 
 %\usepackage[round]{natbib}
 %\bibliographystyle{evolution}
@@ -128,9 +130,9 @@ The species trees represent direct estimates of the evolutionary history of the 
 A direct representation of the species tree is ideal when inferring the evolutionary patterns of species-level characters, like ancestral ranges.
 
 \subsection*{Climate-Driven Diversification}
-The main focus of my current research seeks to determine whether Late Pliocene and Pleistocene climatic oscillations promoted diversification by fragmenting the distributions of species.
+The main focus of my current research seeks to determine whether Quaternary climatic oscillations promoted diversification by fragmenting the distributions of species.
 An ideal model system for such research exists in the complex system of island archipelagos in Southeast Asia.
-The Southeast Asian mainland and complex system of 26,000\+ islands experienced dramatic cyclical shifts in the extent of the terrestrial landscape during recent glacial cycles.
+The Southeast Asian mainland and complex system of 26,000\+ islands experienced dramatic cyclical shifts in the extent of the terrestrial landscape during Quaternary glacial cycles (Figure \ref{map}).
 Many groups of islands in this region coalesced into aggregated islands during glacial periods when sea levels were up to 120m below current level; these aggregated islands where repeatedly fragmented during interglacial highstands.
 
 The repeated formation and fragmentation of these Pleistocene aggregate island complexes (PAICs) has been best characterized in the 7100\+ islands of the Philippines, where it has become a prominent paradigm for understanding the biodiversity of the archipelago.
@@ -139,6 +141,17 @@ To assess the validity of the PAIC model of diversification, Collaborators and I
 We found that PAIC islands did explain a significant proportion of the genetic diversity, but populations from PAIC islands were not monophyletic, and there was no obvious pattern of diversification associated with the Pleistocene.
 We revealed complex histories for both genera that contradict many of the the traditional PAIC model predictions.
 Interestingly, for \emph{Gekko}, we found evidence that the genus colonized the Philippines by ``rafting'' on the Palawan Microcontinental Islands that rifted away from Mainland Asia and drifted towards the rest of the Philippine Archipelago between 30--10 mya.
+
+\begin{wrapfigure}{r}{0.54\textwidth}
+  \vspace{-1.5em}
+  \begin{center}
+    \includegraphics[width=0.53\textwidth]{sunda_shelf_small.pdf}
+  \end{center}
+  \vspace{-0.2em}
+  \caption{Map of Southeast Asia with land extent (depicted in grey) during glacial lowstands estimated using 120m bathymetry (data from \href{http://ngdc.noaa.gov/mgg/global/global.html}{ETOPO1}).}
+  \label{map}
+  \vspace{-1.1em}
+\end{wrapfigure}
 
 Recognizing that the shallow timescale of the PAIC cycles is not necessarily conducive for traditional phylogenetic investigations, we also addressed the PAIC diversification hypothesis using a comparative, coalescent-based approach \cite{Oaks2012}.
 If repeated bouts of island connectivity and isolation promoted diversification, the temporal distribution of divergences between inter-island populations within PAICs should be temporally clustered and correspond with interglacial rises in sea level.
@@ -193,7 +206,18 @@ We will implement this method by incorporating a Gibbs sampling proposal mechani
 This software tool will benefit a broad community of researchers conducting phylogeographic analyses, and plan to propose the project to the NSF Division of Environmental Biology (DEB) Phylogenetic Systematics Program to secure funds for the necessary computational resources.
 
 \subsection*{Diversification and Adaptation of Lizards on Continental Islands of the Sunda Shelf}
+The Sunda Shelf of Southeast Asia has been an incredibly dynamic landscape over the past two million years.
+The extent of terrestrial habitat has fluctuated dramatically throughout the Quaternary glacial cycles (Figure \ref{map}).
+Currently surrounding mainland Southeast Asia and the major islands of the Sunda Shelf, are a network of small continental islands that were formally part of the Sunda Peninsula during glacial periods.
+Many of these islands are merely wind-swept rocky outcrops that, nonetheless, support small populations of skinks (\emph{Eutropis multifasciata}) and geckos (\emph{Lepidodactylus lugubris}).
+These islands were likely completely inundated during highstand 300k years ago, subsequently spent most of x to y as part of mainland SE Asia, and then were fragmented into a network of small islands z years ago when the current interglacial began.
+This network of tiny islands harboring small insular populations of co-distributed lizards offers a unique model system for studying the 
+1) affects of recent, severe fragmentation on historical demography and diversification,
+2) evolution of reproductive mode,
+3) rapid evolution of color pattern, and 
+4) interplay between selection and genetic drift in extremely small populations under strong selective pressures.
 
+Long term study with many avenues to pursue... talk about initial stages
 
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
