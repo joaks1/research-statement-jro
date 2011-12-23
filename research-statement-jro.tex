@@ -1,6 +1,16 @@
 \documentclass[10pt]{article}
-\usepackage{anysize}
-\marginsize{1in}{1in}{.5in}{.5in}
+%\usepackage{anysize}
+%\papersize{11in}{8.5in}
+%\marginsize{1in}{1in}{.5in}{.5in}
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = -0.5 in
+\headheight = 0.35 in
+\headsep = 0.15 in
+\topskip = 0 in
+\footskip = 0.5 in
 \pagenumbering{arabic}
 \usepackage{setspace}
 \usepackage[usenames]{color}
@@ -103,8 +113,8 @@
 \raggedright
 \singlespacing
 
-\emph{What historical and ecological processes shape genetic variation both temporally and spatially, partition evolutionary lineages, and generate and maintain biodiversity?}
-Elucidating this question is the primary motivation of my research program.
+\textbf{\textit{What historical and ecological processes shape genetic variation both temporally and spatially, partition evolutionary lineages, and generate and maintain biodiversity?}} \\
+Elucidating the answers to this question is the primary motivation of my research program.
 To address this question, I use patterns of DNA sequence variation within and among species to identify independent evolutionary lineages (i.e., species) and infer their demographic histories and relationships, testing for patterns predicted by current ecological factors and historical events.
 To do this as robustly as possible, my research also strongly focuses on the development, implementation, and application of phylogenetic and phylogeographic models of evolution.
 
@@ -113,11 +123,11 @@ To do this as robustly as possible, my research also strongly focuses on the dev
 \subsection*{Diversification of Crocodiles}
 Traditionally, crocodiles (\emph{Crocodylus}) have been stereotyped as an ancient group of ``living fossils'' that originated in Africa prior to the fragmentation of Pangea; their diversity and circumtropical distribution was attributed to vicariance via continental drift.
 However, early molecular data and subsequent reassessment of paleontological data suggested the genus could be younger than previously believed.
-Recently, I collected a large multi-locus molecular dataset of all extant crocodylian species and used novel statistical phylogenetic methods to infer the temporal and biogeographical origin of \emph{Crocodylus}.
+Recently, I collected a large multi-locus dataset of all extant crocodylian species and used novel statistical phylogenetic methods to infer the temporal and biogeographical origin of \emph{Crocodylus}.
 My results overturned traditional views of crocodiles as ``living-fossils'' from Africa, revealing a recent and dynamic evolutionary history \footfullcite{Oaks2011}.
 My results strongly support that all extant crocodiles shared a common ancestor from the tropics of the Indo-Pacific, approximately 14--8 million years ago (mya), rejecting an ancient vicariant explanation of their biogeography in favor of a recent, dispersal-mediated model involving multiple transoceanic dispersals.
 It was not until after the mid-Miocene climatic optimum, when the global climate was cooling and fellow crocodylian lineages were suffering massive extinctions, that \emph{Crocodylus} radiated and dispersed around the globe.
-This finding suggests it was not only global cooling driving the extinction of other crocodylians, as previously believed, but also competition with the rapidly radiating \emph{Crocodylus} lineage.
+This finding suggests it was not only global cooling driving the extinction of other crocodylians, as previously believed, but also most likely competition with the rapidly radiating \emph{Crocodylus} lineage.
 %My results also revealed more species diversity within the \emph{Crocodylus} than currently recognized.
 
 This study also introduced important methodological innovations.
@@ -136,7 +146,7 @@ Many groups of islands in this region coalesced into aggregated islands during g
 
 The repeated formation and fragmentation of these Pleistocene aggregate island complexes (PAICs) has been best characterized in the 7100+ islands of the Philippines, where it has become a prominent paradigm for understanding the biodiversity of the archipelago.
 The PAIC model has most commonly been used to delineate areas of endemism across the Philippines, but has also been hypothesized to have increased the biodiversity of the islands by promoting speciation during island fragmentation.
-To assess the validity of the PAIC model of diversification, Collaborators and I have been studying the evolutionary history of two genera of geckos (\emph{Cyrtodactylus} and \emph{Gekko}) that are co-distributed across most of the islands of the Philippines\footfullcite{Siler2010}\super{,}\footfullcite{Siler2012}.
+To assess the validity of the PAIC model of diversification, collaborators and I have been studying the evolutionary history of two genera of geckos (\emph{Cyrtodactylus} and \emph{Gekko}) that are co-distributed across most of the islands of the Philippines\footfullcite{Siler2010}\super{,}\footfullcite{Siler2012}.
 We found that PAIC islands did explain a significant proportion of the genetic diversity, but populations from PAICs were not monophyletic, and there was no obvious pattern of diversification associated with the Pleistocene.
 We revealed complex histories for both genera that contradict many of the the traditional PAIC model predictions.
 Interestingly, for \emph{Gekko}, we found evidence that the genus colonized the Philippines by ``rafting'' on the Palawan Microcontinental Islands that rifted away from Mainland Asia and drifted towards the rest of the Philippine Archipelago between 30--10 mya.
@@ -160,11 +170,11 @@ We inferred the distribution of divergence times across the 22 pairs of populati
 We found very strong support (posterior probability of 0.982) for a recent, simultaneous divergence event shared by all 22 taxa.
 
 Rather than interpret this support for simultaneous divergence across the 22 taxa as strong evidence of climate-driven diversification, I performed extensive simulation-based analyses to assess the ability of the msBayes method to detect variation in divergence times.
-The results of the simulations revealed that msBayes has low power and is biased towards inferring ``simultaneous'' divergence; we were likely to have inferred simultaneous divergence even if the 22 population pairs had randomly diverged over the past 3--2 million years.
+The results of the simulations revealed that msBayes has low power and is biased towards inferring ``simultaneous'' divergence; I demonstrated that we were likely to have inferred simultaneous divergence even if the 22 population pairs had randomly diverged over the past 3--2 million years.
 This finding is important, because msBayes is a popular method, and inferences of clustered divergence times across co-distributed taxa has often been interpreted as evidence for a shared historical event in the literature.
 Our results demonstrate that the method can be biased towards such results, and the interpretation of a shared event is not warranted without simulation-based validation of the method's performance.
 
-Given that we have exhausted currently available methods using moderate-sized datasets, I am currently using an integrative approach to better assess the Pleistocene-diversification hypothesis.  Concurrently, I am  1) collecting genome-scale data from dense sampling of \emph{Cyrtodactylus} and \emph{Gekko} from across the Philippine Archipelago using next-generation sequencing technology, and 2) implementing a more powerful comparative phylogeographic method for inferring the temporal distribution of divergences within a fully Bayesian multi-species coalescent framework.
+Given that we have exhausted currently available methods using moderate-sized datasets, I am currently using an integrative approach to better assess the Pleistocene-diversification hypothesis.  Concurrently, I am (1) collecting genome-scale data from dense sampling of \emph{Cyrtodactylus} and \emph{Gekko} from across the Philippine Archipelago using next-generation sequencing technology, and (2) implementing a more powerful, comparative phylogeographic method for inferring the temporal distribution of divergences within a fully Bayesian multi-species coalescent framework.
 
 \subsubsection*{1) Next-generation sequencing of geckos}
 I am currently collecting genomic sequence data at low-level coverage from a small subset of our \emph{Cyrtodactylus} and \emph{Gekko} samples using Illumina TruSeq SBS sequencing chemistry.
@@ -187,8 +197,8 @@ Also, by using a fully phylogenetic framework, we can infer more complicated pat
 %%%%%%%%%%%%%%%
 \subsection*{Simultaneous Estimation of Population History and Structure: A Novel Approach}
 Currently, the inference of species trees from multi-locus genetic data collected at a phylogeographic scale is typically conducted in a two-step process.
-First, the investigator must estimate how many populations (or species) are represented in their sample, and the assignment of individuals to those populations.
-This is typically done using some variant of genetic clustering algorithm.
+First, the investigator must estimate how many populations (or species) are represented in their sample, and assign individuals to those populations.
+This is typically done using some variant of a genetic clustering algorithm.
 Second, the relationships among the resulting clusters is then inferred under a multi-species coalescent model.
 The reason this two-step process is currently necessary is because current implementations of multi-species coalescent models assume the population assignment is known without error, and is fixed during the analysis.
 This assumption is often unrealistic for empirical data, because it is often difficult to diagnose cryptic, independent evolutionary lineages with complete certainty.
@@ -228,10 +238,10 @@ My collaborators and I will foster this natural model system as part of a long-t
 My collaborators include
 Dr. Lee Grismer, Professor of Biology at La Sierra University, and international colleagues
 Dr. Norhayati Ahmad, Professor of Science and Technology at the Universiti Kebangsaan Malaysia (UKM), and
-Dr. Shahrul Anuar Mohd. Sah, Professor of the Biological Sciences at the Universiti Sains Malaysia (USM).
+Dr. Shahrul Anuar Mohd Sah, Professor of the Biological Sciences at the Universiti Sains Malaysia (USM).
 We plan to approach different aspects of this study in a series of stages.
 
-The first stage of this study will entail next-gen sequencing of hundreds of loci from dense sampling of individuals of both species across the islands and surrounding landmasses, and collecting a database of whole genomes and transcriptomes from a subset of individuals from a few of the well-sampled islands of known reproductive mode and color phenotype.
+The first stage will entail next-gen sequencing of hundreds of loci from dense sampling of individuals of both species across the islands and surrounding landmasses, and collecting a database of whole genomes and transcriptomes from a subset of individuals from a few of the well-sampled islands of known reproductive mode and color phenotype.
 With the multi-locus data, we will elucidate the evolutionary context of the island populations by using coalescent-based models to infer their past demography and relationships.
 Not only will this address interesting questions about the evolution of populations in this dynamic fragmented landscape, but will also create an evolutionary framework to guide additional data collection and analyses.
 It will allow us to appropriately model the genetic covariance among populations in all downstream analyses, avoiding the erroneous assumption of independence among populations.
