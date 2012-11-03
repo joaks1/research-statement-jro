@@ -156,22 +156,23 @@ with the rapidly radiating \emph{Crocodylus} lineage.
 %than currently recognized.
 
 This study also introduced important methodological innovations.
-To accommodate the variation of substitution rates among DNA sites in the
-alignment, I used a novel approach of estimating the optimal model for
-partitioning the alignment.
-The resulting model performed far better than traditional models that
-partition based on \emph{a priori} expectations \footfullcite{OaksInPrep}.
+To accommodate the variation of substitution rates across DNA positions
+within and among genes, I used a novel approach of estimating the optimal model
+for partitioning the alignment into rate categories.
+The resulting model performed far better than traditional methods that
+partition the alignment based on \emph{a priori} expectations of rate variation
+\footfullcite{OaksInPrep}.
 This has important implications, because improved modeling of among-site rate
 variation will mitigate the underestimation of long branches and concomitant
 systematic error in phylogenetic estimates (e.g., long-branch attraction).
-Furthermore, the estimated phylogeny was among the first time-calibrated
-species tree inferred under a multi-species coalescent model, and was the first
-to use a posterior sample of species trees to estimate ancestral-state
-reconstructions.
-The species trees represent direct estimates of the evolutionary history of the
-species, rather than a proxy estimate of the history of individual gene copies.
-A direct representation of the species tree is ideal when inferring the
-evolutionary patterns of species-level characters, like ancestral ranges.
+Furthermore, the study was among the first to estimate a time-calibrated
+species tree using a multi-species coalescent model, and was the first to use a
+posterior sample of species trees to estimate ancestral-state reconstructions.
+% The species tree represents the evolutionary history of populations, rather
+% than the history of individual gene copies.
+Using a direct estimate of the species phylogeny, rather than the history of
+individual gene copies, is ideal when inferring the evolutionary patterns of
+species-level characters, like ancestral ranges.
 
 \subsection*{Climate-Driven Diversification}
 The main focus of my current research seeks to determine whether Quaternary
@@ -194,7 +195,7 @@ The PAIC model has most commonly been used to delineate areas of endemism
 across the Philippines, but has also been hypothesized to have increased the
 biodiversity of the islands by promoting speciation during island
 fragmentation.
-To assess the validity of the PAIC model of diversification, collaborators and
+To test the PAIC model of diversification, collaborators and
 I have been studying the evolutionary history of two genera of geckos
 (\emph{Cyrtodactylus} and \emph{Gekko}) that are co-distributed across most of
 the islands of the
@@ -206,7 +207,7 @@ We revealed complex histories for both genera that contradict many of the the
 traditional PAIC model predictions.
 Interestingly, for \emph{Gekko}, we found evidence that the genus colonized the
 Philippines by ``rafting'' on the Palawan Microcontinental Islands that rifted
-away from Mainland Asia and drifted towards the rest of the Philippine
+away from Mainland Asia and drifted toward the rest of the Philippine
 Archipelago between 30--10 mya.
 
 \begin{wrapfigure}{r}{0.54\textwidth}
@@ -245,14 +246,14 @@ Rather than interpret this support for simultaneous divergence across the 22
 taxa as strong evidence of climate-driven diversification, I performed
 extensive simulation-based analyses to assess the ability of the msBayes method
 to detect variation in divergence times.
-The results of the simulations revealed that msBayes has low power and is
+The results of the simulations revealed that the method has low power and is
 biased towards inferring ``simultaneous'' divergence; I demonstrated that we
 were likely to have inferred simultaneous divergence even if the 22 population
 pairs had randomly diverged over the past two million years.
-This finding is important, because msBayes is a popular method, and inferences
-of clustered divergence times across co-distributed taxa have often been
-interpreted as evidence for a shared historical event in the literature.
-Our results demonstrate that the method can be biased towards such results, and
+This finding is important, because msBayes is a popular method, and previous
+inferences of clustered divergence times across co-distributed taxa have often
+been interpreted as evidence for a shared historical event.
+Our results demonstrate that the method can be biased toward such results, and
 the interpretation of a shared event is not warranted without simulation-based
 validation of the method's performance.
 
@@ -283,27 +284,28 @@ multi-species coalescent model that jointly estimates multiple gene trees and
 the shared species tree in which they evolve.
 In this model, the divergence times (node heights of the rooted, ultrametric
 species tree) are among the parameters that are jointly estimated.
-As a developer for BEAST, I am working on a reversible-jump Markov chain Monte
-Carlo (MCMC) method that will co-estimate the number of divergence ``events''
-represented across the species tree, the timing of them, and the assignment of
-nodes to the divergence events, all while integrating over uncertainty in the
-substitution and coalescent processes, gene trees, and species tree.
-The goal is to be able to infer the pattern of divergence times across a
-species tree, and test whether certain divergences are more clustered than
-expected by chance.
+As a developer for BEAST, I am implementing a novel hierarchical Bayesian model
+for co-estimating the number of divergence events across a species tree, the
+assignment of internal nodes to these events, and the timing of each event from
+genomic data, while integrating over uncertainty in phylogeny, gene trees, and
+demographic and mutational parameters.
+The resulting method will provide a fully Bayesian statistical framework
+for determining whether the temporal pattern of divergences across taxa are
+consistent with predictions of historical processes.
 
-This model will have several advantages over the ABC method of msBayes.
+This model will have several advantages over current methods.
 It will take advantage of the full information in the sequence data by
-estimating the posterior probability distributions of the model parameters
-directly from the sequence data, avoiding the loss of information suffered by
-ABC when distilling the data into summary statistics.
-The new method will estimate the relative mutation rates across the species
-tree using rigorous relaxed-clock models already implemented in BEAST.
-This will provide more accurate estimates of species divergence than msBayes,
-which assumes mutation rates are equal across taxa.
-Also, by using a fully phylogenetic framework, we can infer more complicated
-patterns of divergence times than is possible with msBayes, which is restricted
-to comparing pairs of taxa.
+estimating the joint posterior distribution of the model directly from the
+sequence data, avoiding the loss of information suffered by ABC when distilling
+the data into summary statistics.
+The new method will estimate the relative mutation rates and population sizes
+across the species tree using rigorous relaxed-clock and demographic models
+already implemented in BEAST.
+% This will provide more accurate estimates of species divergence existing
+% methods, which assume mutation rates are equal across taxa.
+Also, by using a fully phylogenetic framework, the model can infer more
+complicated patterns of divergence times than is currently possible with
+existing methods restricted to comparing pairs of taxa.
 
 \section*{Future Research}
 %%%%%%%%%%%%%%%
@@ -342,8 +344,8 @@ There are several probability distributions (e.g. Dirichlet process, Pitman-Yor
 process, and uniform process) commonly used as priors in Bayesian nonparametric
 statistics in situations such as this, where we need to estimate the assignment
 of random variables (gene copies) to groups (populations).
-We will implement this method by incorporating a Gibbs sampling proposal
-mechanisms into the BEAST MCMC machinery that numerically integrates over the
+We will implement this method by incorporating a Gibbs-sampling proposal
+mechanism into the BEAST MCMC machinery that numerically integrates over the
 possible numbers of populations and individual assignments.
 %This sampling procedure entails picking a gene copy, removing it from its
 %current population and re-assigning it to one of the other populations or a
@@ -370,9 +372,9 @@ of the Sunda Peninsula during glacial periods.
 Many of these islands are merely wind-swept rocky outcrops that, nonetheless,
 support small populations of skinks (\emph{Eutropis multifasciata}) and geckos
 (\emph{Lepidodactylus lugubris}).
-Many of these islands were likely completely inundated during the last two
+These islands were likely completely inundated during the last two
 interglacial highstands ($\sim$400,000 and $\sim$120,000 years ago) when sea
-levels were up to 20+ m above present.
+levels were up to 20 meters above present.
 For the next 100,000 years, these islands were part of the exposed Sunda Shelf
 landmass during the Wisconsin glaciation, before being fragmented by rising sea
 levels $\sim$12,000 years ago.
@@ -413,16 +415,16 @@ Dr. Shahrul Anuar Mohd Sah, Professor of the Biological Sciences at the
 Universiti Sains Malaysia (USM).
 We plan to approach different aspects of this study in a series of stages.
 
-The first stage will entail next-gen sequencing of hundreds of loci from dense
-sampling of individuals of both species across the islands and surrounding
-landmasses, and collecting a database of whole genomes and transcriptomes from
-a subset of individuals from a few of the well-sampled islands of known
-reproductive mode and color phenotype.
+The first stage will entail next-generation sequencing of hundreds of loci from
+dense sampling of individuals of both species across the islands and
+surrounding landmasses, and collecting a database of whole genomes and
+transcriptomes from a subset of individuals from a few of the well-sampled
+islands of known reproductive mode and color phenotype.
 With the multi-locus data, we will elucidate the evolutionary context of the
 island populations by using coalescent-based models to infer their past
 demography and relationships.
 Not only will this address interesting questions about the evolution of
-populations in this dynamic fragmented landscape, but will also create an
+populations in this dynamic fragmented landscape, but it will also create an
 evolutionary framework to guide additional data collection and analyses.
 It will allow us to appropriately model the genetic covariance among
 populations in all downstream analyses, avoiding the erroneous assumption of
@@ -431,6 +433,7 @@ Using the preliminary genomic and transcriptomic data, we will begin to
 characterize the genetic underpinnings of the variable natural-history
 characteristics of both species (reproductive modes and color patterns).
 We will determine whether the phenotypic variation for each trait is
+environmentally or genetically based, and if the latter, whether it is
 predominantly the result of variation in coding or regulatory sequences.
 We will seek funding from the NSF Phylogenetic Systematics Program for this
 initial stage of the project.
@@ -453,7 +456,7 @@ These populations have recently been restricted to the unusual, harsh habitats
 of the Sunda Shelf islands and have likely been experiencing strong selective
 pressures as a result.
 At the same time, genetic drift is undoubtedly an extremely strong evolutionary
-force on these islands where populations consist of only tens to hundreds of
+force on these islands where populations consist of only hundreds of
 breeding adults.
 This offers a natural model system for studying the interplay between the
 deterministic force of selection and the stochastic force of drift in shaping
