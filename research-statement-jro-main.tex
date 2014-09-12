@@ -1,6 +1,6 @@
-% \textbf{\textit{What processes shape genetic variation both temporally and
-%         spatially, partition evolutionary lineages, and generate and maintain
-%         biodiversity?}} \\
+\textbf{\textit{What processes shape genetic variation both temporally and
+        spatially, partition evolutionary lineages, and generate and maintain
+        biodiversity?}} \\
 \textbf{\textit{What processes control the generation and assembly of
         biodiversity?}}
 Elucidating answers to this question is the primary motivation of my research
@@ -17,7 +17,7 @@ developing model-based statistical procedures for inferring evolutionary
 history,
 developing computational and bioinformatics tools to implement these
 statistical methods and ease data processing and management,
-and ultimately applying novel methods to genomic data to test
+and applying novel methods to genomic data to test
 hypotheses about diversification.
 
 \section*{Previous Research}
@@ -74,8 +74,8 @@ promoted diversification by fragmenting the distributions of species.
 % One focus of my current research seeks to determine whether Quaternary climatic
 % oscillations promoted diversification by fragmenting the distributions of
 % species.
-An ideal model system for addressing this question is the complex system of
-island archipelagos in Southeast Asia.
+An ideal model system for addressing this question is the dynamic landscape of
+Southeast Asia.
 The Southeast Asian mainland and complex system of 26,000+ islands experienced
 dramatic cyclical shifts in the extent of the terrestrial landscape during
 Quaternary glacial cycles.
@@ -109,28 +109,27 @@ traditional areas of endemism predicted by Pleistocene island complexes.
 Interestingly, for \emph{Gekko}, we found evidence that the genus colonized the
 Philippines by ``rafting'' on the Palawan Microcontinental Islands that rifted
 away from Mainland Asia and drifted toward the rest of the Philippine
-Archipelago between 30--10 mya.
+Archipelago.
 
 In order to more directly test whether Quaternary glacial cycles promoted
 diversification, we used a broadly comparative approach\cref{Oaks12}.
 We accumulated genetic data from 22 distantly related taxa, representing five
 orders of terrestrial vertebrates.
-For each taxon, we sampled genetic data from a pair of populations currently on
-two separate islands in the Philippines previously connected during glacial
-periods.
+For each taxon, we sampled genetic data from a two populations currently on
+separate islands previously connected during glacial periods.
 If repeated bouts of island connectivity and isolation promoted
 diversification, the temporal distribution of divergences across the 22
 inter-island pairs of populations should be temporally clustered and correspond
-with interglacial rises in sea level.
+with the interglacial rises in sea level that fragmented the islands.
 To test this prediction, we employed a popular Bayesian model-choice method,
 msBayes, to estimate the probabilities of models in which multiple sets of taxa
-diverge at the same time.
+diverged at the same time.
 We found very strong support
 % (posterior probability of 0.982)
 for a single, recent, simultaneous divergence event shared by all 22 taxa.
 
-Suspicious of such strong support for a single model given parameter richness
-and stochasticity of the candidate models,
+Suspicious of such strong support for a single model given the richness and
+stochasticity of the candidate models,
 we performed extensive simulation-based analyses to assess the ability of the
 msBayes method to detect random variation in divergence times.
 The results of the simulations revealed that the method will often strongly
@@ -148,8 +147,8 @@ Thus, our results from the empirical Philippines data were likely spurious.
 Rather than abandon the approach, I formulated the full evolutionary model
 underlying the simulation-based msBayes procedure and, using fundamental
 principles of Bayesian model choice, identified theoretical reasons the method
-might tend to spuriously infer biogeographically interesting scenarios of
-divergence\footnote{\label{Oaks12}\shortfullcite{Oaks2012}}\super{,}\footnote{\label{Oaks14reply}\shortfullcite{Oaks2014reply}}.
+would tend to spuriously infer simultaneous divergence across
+taxa\footnote{\label{Oaks12}\shortfullcite{Oaks2012}}\super{,}\footnote{\label{Oaks14reply}\shortfullcite{Oaks2014reply}}.
 Guided by these insights, I developed a new model that uses more flexible prior
 probability distributions for many of the models' parameters, and a
 nonparametric Dirichlet-process prior across all possible divergence models.
@@ -162,9 +161,9 @@ Applying this new method to the comparative Philippines dataset, I found a
 large amount of uncertainty about the number of divergence events shared across
 the 22 taxa; there simply was not enough information in our data to
 discriminate among models of divergence.
-While this result is more trustworthy and theoretically intuitive than that
-returned from the original method, it was empirically unsatisfying.
-Thus, my current work strongly focuses on developing more powerful methods for
+While this result is more trustworthy and intuitive than what we found
+with the original method, it was empirically unsatisfying.
+Thus, my current work focuses on developing more powerful methods for
 addressing comparative phylogeographical questions that can leverage large NGS
 datasets.
 
@@ -176,6 +175,8 @@ collecting comparative genomic datasets from biodiverse regions of the planet,
 and applying the former to the latter to enable unprecedented power to
 understand the historical processes of diversification across regions
 characterized by high levels of species richness and endemism.
+Below I detail one such method, and three empirical systems that have inspired
+its development.
 
 % Full likelihood method
 \subsection*{Implementing a full-likelihood Bayesian comparative
@@ -195,9 +196,11 @@ a full-likelihood Bayesian framework.
 % This will remove the gene trees from the numerical approximation machinery and
 % allow efficient sampling of divergence models and population divergence times
 % using full likelihoods and Markov chain Monte Carlo.
-By utilizing all of the information in genome-wide sequence variation, this
-method promises to be much more powerful than its approximate-Bayesian
-counterparts, and will also be applicable at deeper evolutionary timescales.
+By analytically integrating over gene trees, the method will efficiently handle
+genome-scale datasets.
+By utilizing all of the information the data, the method promises to be much
+more powerful than its approximate-Bayesian counterparts, and will also be
+applicable at deeper evolutionary timescales.
 This new tool will allow evolutionary biologists to better leverage comparative
 genetic data to assess the affects of regional and global biogeographical
 processes on biodiversity.
@@ -219,7 +222,7 @@ of Southeast Asia.
 As a complement to this work on oceanic islands, I am also working with an
 international team of collaborators to better understand diversification in
 mainland Southeast Asia.
-Collaborators include
+My collaborators include
 Dr.\ Cameron Siler of the University of Oklahoma,
 Dr.\ Lee Grismer of La Sierra University,
 Dr.\ Norhayati Ahmad of the Universiti
@@ -227,8 +230,9 @@ Kebangsaan Malaysia (UKM),
 Dr.\ Shahrul Anuar Mohd Sah of the Universiti Sains Malaysia (USM),
 and
 Dr.\ Anchalee Aowphol of Kasetsart University.
-We have collected an impressive comparative dataset of reptiles and amphibians
-from across much of the Sunda Shelf.
+Through years of extensive fieldwork, we have collected an impressive
+comparative dataset of reptiles and amphibians from across much of the Sunda
+Shelf.
 Along with additional field collecting, we are currently collecting sequence
 data from many of these taxa.
 We will apply the methods I am developing to test long-standing hypotheses
@@ -240,7 +244,7 @@ Program for this project.
 
 \subsection*{Diversification of the highly endemic fauna of the Gobi Desert}
 The Gobi is the largest desert in Asia and is a mosaic of rocky mountain ranges
-surrounded by basins of desert sand dunes.
+surrounded by basins of sand dunes.
 % I am interested in better understanding the origins of the unique and highly
 % endemic biodiversity of this region.
 An international team of collaborators (Jesse Grismer and Dr.\ Rafe Brown of
@@ -248,15 +252,16 @@ the University of Kansas, Dr.\ Natalia Ananjeva of the Russian Academy of
 Sciences, Dr.\ Xianguang Guo of the Chinese Institute of Biology, and Dr.\
 Nyamsuren Batsaikhan of the National University of Mongolia) and I were awarded
 a grant from the National Geographic Society to better document and understand
-the history of the diversity reptiles that inhabit this region.
-Our goal is to collect genomic data from a set of focal sand- and rock-adapted
+the history of the unique assemblage of reptiles that inhabit this region.
+Our goal is to collect genomic data from a set of focal sand and rock-adapted
 taxa and use the comparative phylogeographical methods I am developing to
 (1) infer their evolutionary origins,
 (2) test for patterns of shared evolutionary history, and
-(3) identify key processes that led to the unique fauna of this region.
-We will use the data and results from our current National Geographic award to
-apply for funding from the NSF Phylogenetic Systematics Program to extend this
-project.
+(3) identify key processes that led to the diverse and unique fauna of this
+region.
+% We will use the data and results from our current National Geographic award to
+% apply for funding from the NSF Phylogenetic Systematics Program to extend this
+% project.
 
 % Unfunded collaborator on Adam and Matt's pending NSF proposal to apply method
 % Africa
@@ -269,8 +274,8 @@ across West-Central African rainforests.
 We are particularly interested in determining how Pliocene and Pleistocene
 aridification cycles and associated rainforest fragmentation influenced
 diversification across the Afro-tropics.
-I am a collaborator on a pending NSF proposal to extend this work that was
-recently submitted by Drs. Leach\'{e} and Fujita.
+% I am a collaborator on a pending NSF proposal to extend this work that was
+% recently submitted by Drs. Leach\'{e} and Fujita.
 
 % Apply new method to sunda shelf (Malaysia/Thailand)
 
@@ -279,10 +284,9 @@ recently submitted by Drs. Leach\'{e} and Fujita.
 
 \subsection*{Theoretical and computational advances in phylogeography}
 The projects below will result in computational tools that will benefit a broad
-community of researchers conducting biogeographical analyses. I seek funding
-from the NSF Division of Environmental Biology (DEB) Phylogenetic Systematics
-Program to secure funds for the necessary computational resources to develop,
-test, and deploy these methods.
+community of researchers conducting biogeographical analyses. I will seek
+funding from the NSF Phylogenetic Systematics Program to secure funds for the
+necessary computational resources to develop, test, and deploy these methods.
 
 \subsubsection*{Extending comparative phylogeographical model choice to a fully
     phylogenetic framework}
@@ -291,51 +295,38 @@ greatly improve the accuracy and power of phylogeographcial inference, I have
 plans to go even further and integrate the approach into a fully phylogenetic
 framework.
 I will do this by implementing a novel hierarchical Bayesian model for
-co-estimating the number of divergence events across a coalescent-based species
-phylogeny, the assignment of the internal nodes in the tree to the events, and
-the timing of each event, while integrating over uncertainty in phylogeny, gene
-trees, and demographic and mutational parameters.
-This approach will take advantage of information in the genetic data about the
-relative rates of mutation and population sizes across taxa, while jointly
-estimating the divergence history across the tree.
+co-estimating the number and timing of divergence events across a phylogeny,
+and the assignment of the internal nodes in the tree to the events, while
+integrating over uncertainty in phylogeny, gene trees, and demographic and
+mutational parameters.
+Key advantages of this approach include the ability to
+(1) estimate and accommodate variation in relative rates of mutation and
+population sizes across the phylogeny while jointly estimating the divergence
+history, and
+(2) infer more complicated divergence histories than is possible with methods
+restricted to comparing pairs of populations.
 % The resulting method will provide a fully Bayesian statistical framework
 % for determining whether the temporal pattern of divergences across taxa are
 % consistent with predictions of historical processes.
-Also, by using a fully phylogenetic framework, the model can infer more
-complicated divergence histories than is possible with methods restricted to
-comparing pairs of taxa.
 
-% \subsection*{Simultaneous Estimation of Population History and Structure: A
-% Novel Approach}
-% Currently, the inference of species trees from multi-locus genetic data
-% collected at a phylogeographic scale is typically conducted in a two-step
-% process.
-% First, the investigator must estimate how many populations (or species) are
-% represented in their sample, and assign individuals to those populations.
-% This is typically done using some variant of a genetic clustering algorithm.
-% Second, the relationships among the resulting clusters is then inferred under a
-% multi-species coalescent model.
-% The reason this two-step process is currently necessary is because current
-% implementations of multi-species coalescent models assume the population
-% assignment is known without error, and is fixed during the analysis.
-% This assumption is often unrealistic for empirical data, because it is often
-% difficult to diagnose cryptic, independent evolutionary lineages with complete
-% certainty.
-% Another potential problem with this approach is that the genetic clustering
-% methods simply group individuals based on allele frequencies, and do not use
-% the information contained in the sequence data about the genealogical history
-% of the alleles; using such information is a major strength of coalescent-based
-% methods.
-% Thus, initially inferring the population assignments using
-% allele-frequency-based methods does not make full use of the sequence data and
-% is more likely to lead to erroneous results.
-
-% A more robust approach would be to integrate these two steps and make
-% population assignment a random variable estimated during the inference of the
-% population tree.
-% I will collaborate with Mark Holder to develop a method to do this using a
-% nonparametric Bayesian MCMC method that treats population assignment as a
-% random variable under a discrete prior distribution.
+\subsection*{Simultaneous Estimation of Population History and Structure: A
+Novel Approach}
+Currently, the estimation of coalescent-based phylogenies of recently
+diversified species entails a two-step process.
+First, some variant of a genetic clustering algorithm is used to estimate how
+many populations (or species) are represented in their sample, and assign
+individuals to those populations.
+Second, the relationships among the resulting clusters is then inferred under a
+multi-species coalescent model.
+This assumes the population assignment is estimated without error, which is
+especially worrying because genetic clustering methods group individuals based
+on allele frequencies, and ignores information about the genealogical history
+of the alleles.
+I plan to develop a more robust approach that integrates these two steps and
+makes population assignment a random variable to be estimated during the
+inference of the species tree.
+I will collaborate with Mark Holder to do this using a hierarchical Bayesian
+model that treats population assignment as Dirichlet process.
 % We will implement this method by incorporating a Gibbs-sampling proposal
 % mechanism into the BEAST MCMC machinery that numerically integrates over the
 % possible numbers of populations and individual assignments.
@@ -346,9 +337,9 @@ of the Sunda Shelf}
 % the past two million years.
 % The extent of terrestrial habitat has fluctuated dramatically throughout the
 % Quaternary glacial cycles (Figure \ref{map}).
-Surrounding mainland Southeast Asia and the major islands of the Sunda Shelf,
-is a network of small continental islands that were formally part of the Sunda
-Peninsula during glacial periods.
+Scattered across the Sunda Shelf of Southeast Asia, is a network of small
+continental islands that were formally part of the Sunda Peninsula during
+glacial periods.
 Many of these islands are merely wind-swept rocky outcrops that, nonetheless,
 support small populations of skinks (\emph{Eutropis multifasciata}) and geckos
 (\emph{Lepidodactylus lugubris}).
@@ -372,17 +363,17 @@ reproduction.
 %wind-swept rocky islands, because it is outcompeted by other gecko species in
 %more typical gecko habitats.
 Similarly, populations of \emph{L.\ lugubris} also vary in reproductive mode
-across the range of the species; some population are comprised solely of
+across the range of the species; some populations are comprised solely of
 asexual, parthenogenetic females, whereas others are sexual.
 
 The network of minuscule islands distributed across the Sunda Shelf harboring
 small insular populations of co-distributed lizards offers a unique model
 system for studying the 
-1) affects of recent, severe fragmentation on historical demography and
+(1) affects of recent, severe fragmentation on historical demography and
 diversification,
-2) evolution of reproductive mode,
-3) rapid evolution of color pattern, and 
-4) the interplay between selection and genetic drift in extremely small
+(2) evolution of reproductive mode,
+(3) rapid evolution of color pattern, and 
+(4) the interplay between selection and genetic drift in extremely small
 populations under strong selective pressures.
 My collaborators and I will foster this natural model system as part of a
 long-term project to address these questions.
@@ -399,8 +390,7 @@ For the first stage of this projcet, we will elucidate the evolutionary context
 of the island populations by inferring their relationships and demographic
 history.
 This will allow us to appropriately model the genetic covariance among
-populations in all downstream analyses, avoiding the erroneous assumption of
-independence among populations.
+populations in all downstream analyses.
 Using the preliminary genomic and transcriptomic data, we will begin to
 characterize the genetic underpinnings of the variable natural-history
 characteristics of both species (reproductive modes and color patterns).
@@ -414,14 +404,14 @@ initial stage of the project.
 In the second stage of the project, we will collect sequence data from regions
 of the genome relevant to variation in the traits of interest for many
 individuals across the islands and neighboring mainland.
-We will also make field and lab observations to characterize the traits of
-interest in each population.
+% We will also make field and lab observations to characterize the traits of
+% interest in each population.
 Using these data, we can determine if the genetic variants responsible for the
 different phenotypes are the result of independent, parallel mutations, or
 whether these variants are present across much of the distribution of these
 species at low frequencies and are independently fixed among different
 populations.
-We will also analyze these data within the phylogeographic context of the
+We will also analyze these data within the phylogenetic context of the
 populations elucidated in Stage 1 to understand the relative contributions of
 selection versus drift in the evolution of these traits.
 % These populations have recently been restricted to the unusual, harsh habitats
@@ -436,10 +426,8 @@ selection versus drift in the evolution of these traits.
 We will seek funding from the NSF Phylogenetic Evolutionary Genetics Program
 for the second stage of the project.
 
-Once we have established the phylogeographic context of the island populations
-and the genetic mechanisms responsible for their phenotypic variation, the
-third stage of the project will aim to understand the evolutionary ecology of
-this system.
+The third stage of the project will aim to understand the evolutionary ecology
+of this system.
 We want to understand what intra-specific, inter-specific, and abiotic
 interactions influence the selection on the regions of the genome that control
 important phenotypic characteristics.
