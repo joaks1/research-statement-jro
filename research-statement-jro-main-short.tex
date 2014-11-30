@@ -5,9 +5,9 @@
         biodiversity?}}
 This question is the primary motivation of my research program.
 To elucidate answers, I use patterns of genetic variation within and among
-species to identify independent evolutionary lineages (i.e., species) and infer
-their demographic histories and relationships, testing for patterns predicted
-by current ecological factors and historical events.
+natural populations to identify independent evolutionary lineages (i.e.,
+species) and infer their demographic histories and relationships, testing for
+patterns predicted by current ecological factors and historical events.
 I use a broad suite of methods in this endeavor, including
 % collection-based fieldwork,
 fieldwork,
@@ -90,38 +90,7 @@ shifts in the extent of the terrestrial landscape during glacial cycles.
 Many groups of islands in this region coalesced during glacial periods when sea
 levels were lower than today; these islands were repeatedly fragmented during
 interglacial rises in sea level.
-
-% \begin{wrapfigure}{r}{0.44\textwidth}
-%   \vspace{-1.5em}
-%   \begin{center}
-%       \fbox{\includegraphics[width=0.43\textwidth]{sunda_shelf_very_small.pdf}}
-%   \end{center}
-%   \vspace{-0.2em}
-%   \caption{Map of Southeast Asia with land extent (depicted in grey) during
-%   glacial lowstands estimated using 120m bathymetry (data from
-%   \href{http://ngdc.noaa.gov/mgg/global/global.html}{ETOPO1}).}
-%   \label{map}
-%   \vspace{-1.1em}
-% \end{wrapfigure}
-
-% To test whether the repeated fragmentation of island complexes
-% promoted diversification, collaborators and I have been studying the
-% evolutionary history of two genera of geckos (\emph{Cyrtodactylus} and
-% \emph{Gekko}) that are co-distributed across most of the islands of the
-% Philippines\footnote{\label{Siler10}\shortfullcite{Siler2010}}\super{,}\footnote{\label{Siler12}\shortfullcite{Siler2012}}.
-% We found that populations within island complexes did explain a significant
-% proportion of the genetic diversity, but were not monophyletic, and there was
-% no obvious pattern of diversification associated with Pleistocene glacial
-% cycles.
-% We revealed complex histories for both genera that contradict many of the
-% traditional areas of endemism predicted by island connectivity during glacial
-% periods.
-% Interestingly, for \emph{Gekko}, we found evidence that the genus colonized the
-% Philippines by ``rafting'' on the Palawan Microcontinental Islands that rifted
-% away from Mainland Asia and drifted toward the rest of the Philippine
-% Archipelago.
-
-To test whether glacial cycles promoted diversification,
+To test whether this promoted diversification,
 collaborators and I used a broadly comparative approach\cref{Oaks12}.
 We accumulated genetic data from island populations of 22 distantly related
 taxa, representing five orders of terrestrial vertebrates.
@@ -160,8 +129,8 @@ underlying the msBayes procedure and, using first
 principles of probability, identified theoretical reasons the method
 would tend to spuriously infer simultaneous divergence across
 taxa\footnote{\label{Oaks12}\shortfullcite{Oaks2012}}\super{,}\footnote{\label{Oaks14reply}\shortfullcite{Oaks2014reply}}.
-Guided by these insights, I developed a new model that uses more flexible prior
-probability distributions for many of the models' parameters, and a
+Guided by these insights, I developed a new method that uses more flexible
+prior probability distributions for many of the models' parameters, and a
 nonparametric Dirichlet-process prior across all possible divergence models.
 I implemented the new model in the software package dpp-msbayes, and developed
 a much more efficient multi-processing interface for both dpp-msbayes and
@@ -173,8 +142,8 @@ large amount of uncertainty about the number of divergence events shared across
 the 22 taxa.
 % ; there simply was not enough information in our data to
 % discriminate among models of divergence.
-While such uncertainty is more intuitive than what we found with the original
-method, it was empirically unsatisfying.
+While such uncertainty is more intuitive than the results we found with the
+original method, it was empirically unsatisfying.
 Thus, my current work focuses on developing more powerful methods that can
 leverage large, comparative NGS datasets for addressing questions about
 diversification.
@@ -196,7 +165,7 @@ Both msBayes and dpp-msbayes use approximate likelihoods and discard
 information when reducing genetic data to a set of insufficient summary
 statistics.
 Thus, dpp-msbayes still struggles to discriminate among models of divergence at
-recent evolutionary timescales \footnote{\label{Oaks14dpp}\shortfullcite{Oaks2014dpp}}.
+recent evolutionary timescales\footnote{\label{Oaks14dpp}\shortfullcite{Oaks2014dpp}}.
 Given that such a statistical tool is integral to the evolutionary questions
 I seek to answer in my empirical research,
 I am currently developing a method that employs a similar hierarchical model in
@@ -301,7 +270,7 @@ integrating over uncertainty in phylogeny, gene trees, and demographic and
 mutational parameters.
 This approach will estimate and accommodate variation in relative rates of
 mutation and population sizes across the phylogeny while jointly estimating the
-divergence history, and
+divergence history.
 % (2) infer more complicated divergence histories than is possible with methods
 % restricted to comparing pairs of populations.
 This project will result in computational tools that will benefit a broad
@@ -362,9 +331,9 @@ Furthermore, populations of \emph{E.\ multifasciata} vary between egg-laying
 %\emph{L.\ lugubris} is often restricted to peripheral habitats, such as
 %wind-swept rocky islands, because it is outcompeted by other gecko species in
 %more typical gecko habitats.
-Similarly, populations of \emph{L.\ lugubris} also vary in reproductive mode
-across the range of the species; some populations are comprised solely of
-asexual, parthenogenetic females, whereas others are sexual.
+Similarly, populations of \emph{L.\ lugubris} also vary in reproductive mode;
+some populations are comprised solely of asexual, parthenogenetic females,
+whereas others are sexual.
 
 The network of minuscule islands distributed across the Sunda Shelf harboring
 small populations of lizards offers a unique model system for studying the 
@@ -405,10 +374,9 @@ across the islands and neighboring mainland.
 % We will also make field and lab observations to characterize the traits of
 % interest in each population.
 Using these data, we can determine if the genetic variants responsible for the
-different phenotypes are the result of independent, parallel mutations, or
-whether these variants are present across much of the distribution of these
-species at low frequencies and are independently fixed among different
-populations.
+different phenotypes are the result of independent, parallel mutations, or are
+present across much of the distribution of these species at low frequencies and
+are independently fixed among different populations.
 % We will also analyze these data within the phylogenetic context of the
 % populations elucidated in Stage 1 to understand the relative contributions of
 % selection versus drift in the evolution of these traits.
@@ -438,5 +406,5 @@ Are the striking color polymorphisms of \emph{E.\ multifasciata} adaptive?
 % questions at the genetic level in these species.
 We will seek funding for the three stages of this work from the NSF
 Phylogenetic Systematics, Evolutionary Genetics, and Evolutionary Ecology
-Program.
+Programs.
 
