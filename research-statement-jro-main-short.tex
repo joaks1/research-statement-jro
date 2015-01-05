@@ -5,10 +5,10 @@
         biodiversity?}}
 This question is the primary motivation of my research program.
 To elucidate answers, I use patterns of genetic variation within and among
-natural populations to identify independent evolutionary lineages (i.e.,
-species) and infer their demographic histories and relationships, testing for
-patterns predicted by current ecological factors and historical events.
-I use a broad suite of methods in this endeavor, including
+natural populations to identify evolutionary lineages and infer their
+demographic histories and relationships, testing for patterns predicted by
+current ecological factors and historical events.  I use a broad suite of
+methods in this endeavor, including
 % collection-based fieldwork,
 fieldwork,
 next-generation sequencing (NGS),
@@ -22,10 +22,10 @@ hypotheses about diversification.
 % As a result, it is imperative that I involve students with diverse
 % backgrounds and interests, who can bring unique perspectives to the
 % challenges in my lab.
-Given the integrative nature of my research program, I seek to recruit students
-with diverse backgrounds and interests.
-The questions I am passionate about exploring are open-ended and require
-critical thinking and creativity.
+% Given the integrative nature of my research program, I seek to recruit students
+% with diverse backgrounds and interests.
+The questions I am passionate about exploring are integrative, open-ended, and
+require critical thinking and creativity.
 As a result, it is imperative that I involve students and collaborators with
 diverse backgrounds and perspectives to bring together unique insights.
 
@@ -85,53 +85,46 @@ promoted diversification by fragmenting the distributions of species.
 % species.
 An ideal model system for addressing this question is the dynamic landscape of
 Southeast Asia.
-The Southeast Asian mainland and 26,000+ islands experienced dramatic cyclical
-shifts in the extent of the terrestrial landscape during glacial cycles.
-Many groups of islands in this region coalesced during glacial periods when sea
-levels were lower than today; these islands were repeatedly fragmented during
-interglacial rises in sea level.
-To test whether this promoted diversification,
-collaborators and I used a broadly comparative approach\cref{Oaks12}.
-We accumulated genetic data from island populations of 22 distantly related
-taxa, representing five orders of terrestrial vertebrates.
-For each taxon, we sampled genetic data from two populations currently on
-separate Philippine Islands that were previously connected during glacial
-periods.
+% The Southeast Asian mainland and 26,000+ islands experienced dramatic cyclical
+% shifts in the extent of the terrestrial landscape during glacial cycles.
+Many groups of islands in this region coalesced during lower sea levels of
+glacial periods and were fragmented during interglacial rises in sea level.
+To test whether this promoted diversification, collaborators and I used a
+broadly comparative approach\cref{Oaks12} to compare the divergence times
+of inter-island populations across 22 distantly related taxa.
+% For each taxon, we sampled genetic data from two populations currently on
+% separate Philippine Islands that were previously connected during glacial
+% periods.
 If repeated bouts of island connectivity and isolation promoted
-diversification, the temporal distribution of divergences across the 22
-inter-island pairs of populations should be temporally clustered and correspond
-to interglacial rises in sea level that fragmented the islands.
-To test this prediction, we employed a popular Bayesian method,
-msBayes, to estimate the probabilities of models in which multiple sets of taxa
-diverged at the same time.
+diversification, the temporal distribution of divergences across the 22 taxa
+should be temporally clustered and correspond to interglacial rises in sea
+level that fragmented the islands.
+To test this prediction, we employed a popular approximate-Bayesian method,
+msBayes.
 We found very strong support
 % (posterior probability of 0.982)
 for a single, recent, simultaneous divergence event shared by all 22 taxa.
 
 Suspicious of such strong support given the richness and stochasticity of the
-candidate models,
-I used computer simulations to assess the ability of the msBayes method to
-detect random variation in divergence times.
-The results of the simulations revealed that the method will often strongly
-support highly clustered models of divergence even when the taxa being compared
-diverged randomly over millions of generations.
-Thus, our results from the empirical Philippines data were likely spurious.
+model, I used computer simulations to reveal that the msBayes method often
+strongly supports highly clustered models of divergence even when taxa diverged
+randomly over millions of generations.
+% Thus, our results from the empirical Philippines data were likely spurious.
 % This finding is important, because msBayes is a popular method, and results of
 % clustered divergence times across co-distributed taxa are often interpreted as
 % evidence for a shared historical event.
 % Our results demonstrate that the method can be biased toward such results, and
 % the interpretation of a shared event is not warranted without simulation-based
 % validation of the method's performance.
-
 % Needed better method---did it
-Rather than abandon the approach, I formulated the full evolutionary model
-underlying the msBayes procedure and, using first 
-principles of probability, identified theoretical reasons the method
-would tend to spuriously infer simultaneous divergence across
-taxa\footnote{\label{Oaks12}\shortfullcite{Oaks2012}}\super{,}\footnote{\label{Oaks14reply}\shortfullcite{Oaks2014reply}}.
+Rather than abandon the approach, I formulated the evolutionary model
+underlying the msBayes procedure and, using first principles of probability,
+identified theoretical reasons the method would tend to spuriously infer
+simultaneous divergence across
+taxa\footnote{\label{Oaks12}\shortfullcite{Oaks2012}}.
 Guided by these insights, I developed a new method that uses more flexible
-prior probability distributions for many of the models' parameters, and a
-nonparametric Dirichlet-process prior across all possible divergence models.
+prior probability distributions for many of the parameters, and a nonparametric
+Dirichlet-process prior across all possible divergence models.
 I implemented the new model in the software package dpp-msbayes, and developed
 a much more efficient multi-processing interface for both dpp-msbayes and
 msBayes.
@@ -142,8 +135,8 @@ large amount of uncertainty about the number of divergence events shared across
 the 22 taxa.
 % ; there simply was not enough information in our data to
 % discriminate among models of divergence.
-While such uncertainty is more intuitive than the results we found with the
-original method, it was empirically unsatisfying.
+% While such uncertainty is more intuitive than the results we found with the
+% original method, it was empirically unsatisfying.
 Thus, my current work focuses on developing more powerful methods that can
 leverage large, comparative NGS datasets for addressing questions about
 diversification.
@@ -155,19 +148,17 @@ I am developing and implementing novel comparative methods, collecting genomic
 datasets from biodiverse regions of the planet, and applying the former to the
 latter to enable unprecedented power to understand historical processes of
 diversification across regions characterized by high levels of species richness
-and endemism.  Below I detail one such method, and three empirical systems that
+and endemism.  Below I detail one such method, and the empirical systems that
 have inspired its development.
 
 % Full likelihood method
-\subsubsection*{Implementing a full-likelihood Bayesian model of
-    co-diversification}
+\subsubsection*{Implementing a full-likelihood model of co-diversification}
 Both msBayes and dpp-msbayes use approximate likelihoods and discard
-information when reducing genetic data to a set of insufficient summary
-statistics.
+information when reducing genetic data to a set of summary statistics.
 Thus, dpp-msbayes still struggles to discriminate among models of divergence at
 recent evolutionary timescales\footnote{\label{Oaks14dpp}\shortfullcite{Oaks2014dpp}}.
-Given that such a statistical tool is integral to the evolutionary questions
-I seek to answer in my empirical research,
+% Given that such a statistical tool is integral to the evolutionary questions
+% I seek to answer in my empirical research,
 I am currently developing a method that employs a similar hierarchical model in
 a full-likelihood Bayesian framework.
 % I am utilizing recent developments that analytically integrate over gene trees
@@ -175,17 +166,15 @@ a full-likelihood Bayesian framework.
 % This will remove the gene trees from the numerical approximation machinery and
 % allow efficient sampling of divergence models and population divergence times
 % using full likelihoods and Markov chain Monte Carlo.
-By analytically integrating over gene trees, the method will efficiently handle
-NGS datasets.
-By utilizing all of the information in the data, the method promises to be much
-more powerful than its approximate-Bayesian counterparts, and will also be
-applicable at deeper evolutionary timescales.
+By analytically integrating over gene trees while utilizing all the information
+in the data, the method will be much more powerful, efficiently handle NGS
+datasets, and will be applicable across much broader evolutionary timescales.
 This new tool will allow evolutionary biologists to better leverage comparative
 genomic data to assess the affects of regional and global biogeographical
 processes on biodiversity.
 
 % Apply new method to genomic data from Philippine geckonids
-\subsubsection*{Diversification across oceanic and mainland Southeast Asia}
+\subsubsection*{Diversification across Southeast Asia}
 % (2) collecting genome-scale data from dense sampling of \emph{Cyrtodactylus}
 % and \emph{Gekko} from across the Philippine Archipelago using next-generation
 % sequencing technology.
@@ -196,34 +185,36 @@ from across the Philippine Archipelago using NGS technology.
 The combination of the new method and NGS data will allow us to better assess
 the affect of sea-level fluctuations on diversification across oceanic islands
 of Southeast Asia.
-
-To complement to this work on oceanic islands, I am also working with an
-international team of collaborators
-(Drs.\ Cameron Siler,
-Lee Grismer,
-Norhayati Ahmad,
-Shahrul Anuar Mohd Sah,
-and
-Anchalee Aowphol)
-to better understand diversification in
-mainland Southeast Asia.
-We are collecting a large comparative dataset of reptiles and amphibians from
-across much of the Sunda Shelf, and will apply the
-methods I am developing to test long-standing hypotheses about the affect of
-biogeographical transition zones on the diversification of Sunda Shelf biota,
-including the Isthmus of Kras, and current and paleo-river systems.
+To complement this work on oceanic islands, I am also working with a team of
+collaborators
+% (Drs.\ Cameron Siler,
+% Lee Grismer,
+% Norhayati Ahmad,
+% Shahrul Anuar Mohd Sah,
+% and
+% Anchalee Aowphol)
+% to better understand diversification in
+% mainland Southeast Asia.
+to collect a large comparative genomic dataset from across much of the Sunda
+Shelf.
+We will apply the methods I am developing to test long-standing hypotheses
+about the affect of biogeographical transition zones on the diversification of
+Sunda Shelf biota.
+% including the Isthmus of Kras, and current and paleo-river systems.
 We plan to seek funding from the NSF Biodiversity Discovery and Analysis
 Program for this project.
 
-\subsubsection*{Diversification of the highly endemic fauna of the Gobi Desert}
-The Gobi is the largest desert in Asia and is a mosaic of rocky mountain ranges
-surrounded by basins of sand dunes.
+\subsubsection*{Diversification across the Gobi Desert}
+% The Gobi is the largest desert in Asia and is a mosaic of rocky mountain ranges
+% surrounded by basins of sand dunes.
 % I am interested in better understanding the origins of the unique and highly
 % endemic biodiversity of this region.
-An international team of collaborators (Jesse Grismer and Drs.\ Rafe Brown,
-Natalia Ananjeva, Xianguang Guo, and Nyamsuren Batsaikhan) and I were awarded a
+An international team of collaborators
+% (Jesse Grismer and Drs.\ Rafe Brown,
+% Natalia Ananjeva, Xianguang Guo, and Nyamsuren Batsaikhan)
+and I were awarded a
 grant from the National Geographic Society to better document and understand
-the history of the unique assemblage of reptiles that inhabit this region.
+the history of the unique assemblage of reptiles that inhabit the Gobi Desert.
 Our goal is to collect genomic data from a set of focal sand and rock-adapted
 taxa and use the comparative methods I am developing to
 (1) infer their evolutionary origins,
@@ -236,14 +227,14 @@ region.
 
 % Unfunded collaborator on Adam and Matt's pending NSF proposal to apply method
 % Africa
-\subsubsection*{Diversification in West-Central African rainforests}
-I am working with Drs.\ Adam Leach\'{e} and Matthew Fujita to apply the methods
-described above to comparative NGS datasets to elucidate the historical
-processes of diversification and community assembly across West-Central African
-rainforests.
-We are particularly interested in determining how Pliocene and Pleistocene
-aridification cycles and associated rainforest fragmentation influenced
-diversification across the Afro-tropics.
+% \subsubsection*{Diversification in West-Central African rainforests}
+% I am working with Drs.\ Adam Leach\'{e} and Matthew Fujita to apply the methods
+% described above to comparative NGS datasets to elucidate the historical
+% processes of diversification and community assembly across West-Central African
+% rainforests.
+% We are particularly interested in determining how Pliocene and Pleistocene
+% aridification cycles and associated rainforest fragmentation influenced
+% diversification across the Afro-tropics.
 % I am a collaborator on a pending NSF proposal to extend this work that was
 % recently submitted by Drs. Leach\'{e} and Fujita.
 
@@ -258,7 +249,7 @@ diversification across the Afro-tropics.
 % funding from the NSF Phylogenetic Systematics Program to secure funds for the
 % necessary computational resources to develop, test, and deploy these methods.
 
-\subsubsection*{Inferring co-diversification in a fully phylogenetic framework}
+\subsubsection*{Inferring co-diversification in a phylogenetic framework}
 While the full-likelihood Bayesian method I am developing promises to
 greatly improve the accuracy and power of inferring shared evolutionary
 history, I have plans to go even further and integrate the approach into a
@@ -268,15 +259,16 @@ co-estimating the number and timing of divergence events across a phylogeny,
 and the assignment of the internal nodes in the tree to the events, while
 integrating over uncertainty in phylogeny, gene trees, and demographic and
 mutational parameters.
-This approach will estimate and accommodate variation in relative rates of
-mutation and population sizes across the phylogeny while jointly estimating the
-divergence history.
+% This approach will estimate and accommodate variation in relative rates of
+% mutation and population sizes across the phylogeny while jointly estimating the
+% divergence history.
 % (2) infer more complicated divergence histories than is possible with methods
 % restricted to comparing pairs of populations.
-This project will result in computational tools that will benefit a broad
-community of researchers conducting biogeographical analyses. I will seek
-funding from the NSF Phylogenetic Systematics Program to secure funds for the
-necessary computational resources to develop, test, and deploy these methods.
+% This project will result in computational tools that will benefit a broad
+% community of researchers conducting biogeographical analyses.
+I will seek funding from the NSF Phylogenetic Systematics Program to secure
+funds for the necessary computational resources to develop, test, and deploy
+these methods.
 % The resulting method will provide a fully Bayesian statistical framework
 % for determining whether the temporal pattern of divergences across taxa are
 % consistent with predictions of historical processes.
@@ -304,34 +296,30 @@ necessary computational resources to develop, test, and deploy these methods.
 % mechanism into the BEAST MCMC machinery that numerically integrates over the
 % possible numbers of populations and individual assignments.
 
-\subsubsection*{Diversification and adaptation of lizards on continental islands
-of the Sunda Shelf}
+\subsubsection*{Diversification and adaptation across the Sunda Shelf}
 % The Sunda Shelf of Southeast Asia has been an incredibly dynamic landscape over
 % the past two million years.
 % The extent of terrestrial habitat has fluctuated dramatically throughout the
 % Quaternary glacial cycles (Figure \ref{map}).
-Scattered across the Sunda Shelf of Southeast Asia, is a network of small
-islands that were formally part of the Sunda Peninsula during glacial periods.
+Scattered across the Sunda Shelf, is a network of small islands that were
+formerly part of the Sunda Peninsula during glacial periods.
 Most of the islands were inundated during the last interglacial highstand, and
-subsequently spent the next 100,000 years as part of the exposed Sunda Shelf
-landmass during the Wisconsin glaciation before being isolated by rising sea
-levels $\sim$12,000 years ago.
-
-Many of these islands are merely wind-swept rocky outcrops that, nonetheless,
-support small populations of skinks (\emph{Eutropis multifasciata}) and geckos
-(\emph{Lepidodactylus lugubris}).
+subsequently spent the next 100,000 years as part of the exposed Sunda
+Peninsula before being isolated by rising sea levels $\sim$12,000 years ago.
+Many of these small, wind-swept islands support populations of skinks
+(\emph{Eutropis multifasciata}) and geckos (\emph{Lepidodactylus lugubris}).
 % The lizard species inhabiting these islands have interesting biologies.
-\emph{E.\ multifasciata} has occupied a distinct niche from their mainland,
-forest-dwelling counterparts; they subsist off arthropods attracted to the
-debris of nesting colonies of terns.
-They also exhibit extreme polymorphisms in color patterns among island
-populations, far exceeding the variation seen on the mainland.
-Furthermore, populations of \emph{E.\ multifasciata} vary between egg-laying
-(oviparity) and live-bearing (ovoviviparity) modes of reproduction.
+% \emph{E.\ multifasciata} has occupied a distinct niche from their mainland,
+% forest-dwelling counterparts; they subsist off arthropods attracted to the
+% debris of nesting colonies of terns.
+Island populations of \emph{E.\ multifasciata} vary between egg-laying
+(oviparity) and live-bearing (ovoviviparity) modes of reproduction, and exhibit
+extreme polymorphisms in color patterns among islands, far exceeding the
+variation seen on the mainland.
 %\emph{L.\ lugubris} is often restricted to peripheral habitats, such as
 %wind-swept rocky islands, because it is outcompeted by other gecko species in
 %more typical gecko habitats.
-Similarly, populations of \emph{L.\ lugubris} also vary in reproductive mode;
+Populations of \emph{L.\ lugubris} also vary in reproductive mode;
 some populations are comprised solely of asexual, parthenogenetic females,
 whereas others are sexual.
 
@@ -343,8 +331,8 @@ diversification,
 (3) rapid evolution of color pattern, and 
 (4) the interplay between selection and genetic drift in extremely small
 populations under strong selective pressures.
-My collaborators and I will foster this natural model system as part of a
-long-term, multi-stage project to address these questions.
+Collaborators and I will foster this natural model system as part of a
+long-term, multi-stage project.
 % My collaborators include
 % Dr. Lee Grismer, Professor of Biology at La Sierra University, and
 % international colleagues
@@ -356,8 +344,8 @@ long-term, multi-stage project to address these questions.
 For the first stage of this project, we will elucidate the evolutionary context
 of the island populations by inferring their relationships and demographic
 history.
-This will allow us to appropriately model the genetic covariance among
-populations in all downstream analyses.
+% This will allow us to appropriately model the genetic covariance among
+% populations in all downstream analyses.
 % Using the preliminary genomic and transcriptomic data,
 % We will also collect preliminary genomic and transcriptomic data to begin to
 % characterize the genetic underpinnings of the variable natural-history
