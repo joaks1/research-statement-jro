@@ -44,8 +44,10 @@ hypotheses about processes of evolution and diversification.
 % diverse backgrounds and perspectives to bring together unique insights.
 The questions my lab explores are integrative, open-ended, and require critical
 thinking and creativity.
-As a result, it is imperative that I involve students and collaborators with
-diverse backgrounds and perspectives to bring together unique insights.
+As a result,
+% it is imperative that I involve
+I strive to include students and collaborators with diverse backgrounds and
+perspectives to bring together unique insights.
 
 \section*{Previous Research}
 \subsubsection*{Climate-driven diversification}
@@ -86,7 +88,7 @@ and developed a much more efficient
 for this type of comparative phylogeographic inference.
 As predicted by theory, the new ABC method was more
 accurate\footnote{\label{Oaks14dpp}\shortfullcite{Oaks2014dpp}}.
-However, the new approach also revealed that after distilling the sequence data
+However, the new approach also revealed that after reducing the sequence data
 into insufficient summary statistics, ABC approaches were left with little
 information to provide biological insights,
 which prevented us from evaluating the tenability of the climate-driven
@@ -200,10 +202,33 @@ of biologically inspired mechanistic models whose distribution covers
 this space, we are currently resigned to use phenomenological models
 to represent our \emph{a priori} assumptions.
 To remediate this limitation, my lab is working in collaboration with Sebastian
-H{\"o}hna on generalizing the birth-death process to allow nonindependence of
-divergence times across a phylogeny.
+H{\"o}hna on generalizing the birth-death process to allow the nonindependence
+of divergence times across a phylogeny.
 To fund this work, we are preparing a proposal for the Systematics and
 Biodiversity Science Cluster at the NSF DEB. 
+
+\subsubsection*{Improving phylogenetics with genomic data}
+By analytically integrating over the evolutionary history of individual loci,
+my lab's software
+\href{http://phyletica.org/ecoevolity/}{ecoevolity}
+can infer phylogenies from millions of sites from across the genomes sampled
+from natural populations.
+However, as the number of taxa (and thus the size of the phylogeny) increases,
+the method becomes computationally expensive.
+There are a number of ways that we plan to extend this method to accommodate
+larger phylogenies, including
+(1) analytically integrating the population sizes along the tree to
+avoid having to sample them with computationally expensive algorithms,
+(2) analytically integrating variation in the rate of substitution
+across the tree to relax the assumption of a strict ``molecular clock'' while
+minimizing computational burden,
+and
+(3) limit the size of the state space that needs to be considered when
+calculating the likelihood toward the root of the tree.
+These advances are imperative for inferring large phylogenies from genomic data
+while explicitly accounting for the variation in evolutionary history across
+chromosomes.
+We will continue to seek funds from NSF to support this work.
 
 \subsubsection*{An evolutionary approach to emerging infectious diseases}
 Globally, the association between habitat fragmentation and the emergence of
@@ -239,45 +264,22 @@ preparing to re-submit this proposal in November.
 
 % \section*{Future Research}
 
-\subsubsection*{Improving phylogenetics with genomic data}
-By analytically integrating over the evolutionary history of individual loci,
-my lab's software
-\href{http://phyletica.org/ecoevolity/}{ecoevolity}
-can infer phylogenies from millions of sites from across the genomes sampled
-from natural populations.
-However, as the number of taxa (and thus the size of the phylogeny) increases,
-the method becomes computationally expensive.
-There are a number of ways that we plan to extend this method to accommodate
-larger phylogenies, including
-(1) analytically integrating the population sizes along the tree to
-avoid having to sample them with computationally expensive algorithms,
-(2) analytically integrating variation in the rate of substitution
-across the tree to relax the assumption of a strict clock while
-minimizing computational burden,
-and
-(3) limit the size of the state space that needs to be considered when
-calculating the likelihood toward the root of the tree.
-These advances are imperative for inferring large phylogenies from genomic data
-while explicitly accounting for the variation in evolutionary history across
-chromosomes.
-We will continue to seek funds from NSF to support this work.
-
-
 \subsubsection*{Bringing phylogenetics into the inference of population structure}
-Gideon Bradburd and colleagues recently introduced a method for assigning
-individuals to populations using genomic data, while simultaneously accounting
-for both continuous and discrete genetic variation across a
+Gideon Bradburd and colleagues recently introduced a method that uses genomic
+data to assign individuals to populations while simultaneously accounting for
+continuous patterns of genetic variation across a
 landscape\footnote{\label{Bradburd18}\shortfullcite{Bradburd2018}}.
-This was an important step forward from methods that ignored continuous genetic
-differentiation.
+This was an important step forward from methods that ignored continuous spatial
+genetic differentiation.
 However, their model assumes that the allele frequencies in each population
-has drifted away from an ancestral population independently of one another
+have drifted away from an ancestral population independently of one another
 (i.e., ignoring shared ancestry among the populations).
 Gideon and I are working on extending the method implemented in conStruct
 to simultaneously infer
 (1) the population assignment of each individual's genome (allowing their
-genomes to be admixed), and
-(2) the phylogenetic relationships of the populations.
+genomes to be admixed),
+(2) spatial genetic differentiation within each population, and
+(3) the phylogenetic relationships of the populations.
 We are planning to submit a proposal to the NSF DEB Systematics and
 Biodiversity Science Cluster in Spring 2020 to fund this work.
 
