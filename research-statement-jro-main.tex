@@ -1,6 +1,14 @@
 \textbf{\textit{What processes control the generation of biodiversity?}}
 Elucidating answers to this question, in its broadest sense, is the primary
 motivation of my lab group.
+While research intersts in my lab are diverse, our work is unified by
+(1) benefiting from, and contributing to, the rich information housed in
+biodiversity research collections
+and
+(2) using
+% (2) the use of
+phylogenetics to infer and explicitly account for shared ancestry in our
+approaches to better understand processes of evolution and diversification.
 % To address this question, I use patterns of genetic variation within and among
 % natural populations to identify independent evolutionary lineages (i.e.,
 % species) and infer their demographic histories and relationships, testing for
@@ -31,11 +39,15 @@ We use a broad suite of methods in this endeavor, including
 % high-throughput DNA sequencing,
 % collecting genomic data,
 field and lab work,
-developing statistical procedures for inferring evolutionary history,
+developing statistical methods and associated software for inferring evolutionary history,
+% developing statistical procedures for inferring evolutionary history,
 % from genomic datasets,
-implementing such methods in software,
+% developing software for implementing these methods,
+% implementing such methods in software,
 and ultimately applying these computational tools to genomic data to test
-hypotheses about processes of evolution and diversification.
+% hypotheses about processes of evolution and diversification.
+hypotheses about processes that generate biodiversity.
+% Our work benefits from and contributes to biodiversity research collections.
 % Given the integrative nature of my research program, I seek to recruit students
 % with diverse backgrounds and interests.
 % The questions I am passionate about exploring are open-ended and require
@@ -74,7 +86,7 @@ for a single, recent, simultaneous divergence event shared by all 22 taxa.
 Suspicious of such strong support given the richness and stochasticity of the
 model underlying the ABC method, I used computer simulations to confirm that
 the method often supports highly clustered models of divergence even when taxa
-diverged randomly over millions of years\footnote{\label{Oaks12}\shortfullcite{Oaks2012}}.
+diverged randomly over millions of years\footnote{\label{Oaks12}\shortfullcite{Oaks2012}\hspace{-0.8em}}.
 I formulated the evolutionary model underlying the simulation-based ABC
 procedure and, using first principles of probability, identified theoretical
 reasons the method would tend to spuriously infer simultaneous
@@ -87,7 +99,7 @@ and developed a much more efficient
 \href{https://joaks1.github.io/PyMsBayes/}{multi-processing interface}
 for this type of comparative phylogeographic inference.
 As predicted by theory, the new ABC method was more
-accurate\footnote{\label{Oaks14dpp}\shortfullcite{Oaks2014dpp}}.
+accurate\footnote{\label{Oaks14dpp}\shortfullcite{Oaks2014dpp}\hspace{-0.8em}}.
 However, the new approach also revealed that after reducing the sequence data
 into insufficient summary statistics, ABC approaches were left with little
 information to provide biological insights,
@@ -99,13 +111,13 @@ Motivated by my unsatisfied curiosity, I
 (1) developed a full-likelihood Bayesian method in the software package
 \href{http://phyletica.org/ecoevolity/}{ecoevolity}
 that can leverage all of the information from genomic data to infer
-co-divergences\footnote{\label{Oaks18ecoevolity}\shortfullcite{Oaks2018ecoevolity}},
+co-divergences\footnote{\label{Oaks18ecoevolity}\shortfullcite{Oaks2018ecoevolity}\hspace{-0.8em}},
 and
 (2) collected thousands of loci from across the genomes of geckos sampled from
 16 inter-island pairs of populations.
 The results strongly support that each pair of gecko populations diverged
 independently, refuting the predictions of the climate-driven species-pump
-model\footnote{\label{Oaks18paic}\shortfullcite{Oaks2018paic}};
+model\footnote{\label{Oaks18paic}\shortfullcite{Oaks2018paic}\hspace{-0.8em}};
 a result that makes sense in light of the life history and habitat
 preferences of these lizards.
 % project repo: https://github.com/phyletica/gekgo
@@ -146,13 +158,13 @@ and
     %   Conservation genetics
 
 \section*{Current and Future Research}
-Below, I include short and long-term plans for funding the research in my
-lab, which, given my current position, is geared toward opportunities in the
-United States.
-However, if I were fortunate enough to join the Department of Biology at the
-University of Victoria, I am confident that the research summarized below would
-be competitive for Discovery Grants and other funding opportunities from the
-NSERC of Canada.
+% Below, I include short and long-term plans for funding the research in my
+% lab, which, given my current position, is geared toward opportunities in the
+% United States.
+% However, if I were fortunate enough to join the Department of Biology at the
+% University of Victoria, I am confident that the research summarized below would
+% be competitive for Discovery Grants and other funding opportunities from the
+% NSERC of Canada.
 
 
 % Generally, my lab is developing and implementing novel evolutionary genetic
@@ -190,14 +202,23 @@ explored during Bayesian phylogenetic inference.
 By exploring the full space of phylogenies, we can approximate the probability
 of patterns predicted by processes that cause nonindependent divergences 
 across the tree of life.
-
 We have implemented this approach in 
 \href{http://phyletica.org/ecoevolity/}{ecoevolity}
 and are currently testing it using simulations.
-To use this method to test several long-standing biogeographical
-hypotheses across Southeast Asia,
-we are currently collecting genomic data from several genera of geckos that are
+
+The development of this new statistical phylogenetic framework was motivated by
+our desire to test several long-standing biogeographical hypotheses to explain
+the distribution of the rich biodiversity across Southeast Asia.
+We are currently collecting genomic data from several genera of geckos that are
 co-distributed across much of this region.
+Our recent fieldwork in Indochina has added to our geographic sampling of these
+three genera, and will allow us to use our new methods to test for patterns
+predicted by patterns of diversification across both continental and oceanic
+Southeaset Asia.
+% To use this method to test several long-standing biogeographical
+% hypotheses across Southeast Asia,
+% we are currently collecting genomic data from several genera of geckos that are
+% co-distributed across much of this region.
 To make our approach more generally applicable to questions about biogeography,
 genome evolution, epidemiology, and coevolution,
 we are also porting our distributions and algorithms to the flexible
@@ -245,7 +266,7 @@ zoonotic infectious diseases in human populations has motivated research into
 the ecological processes responsible for this pattern.
 Sarah Zohdy, Tonia Schwartz, and I have proposed an evolutionary mechanism for
 this pattern that can complement ecological
-perspectives\footnote{\label{Zohdy19}\shortfullcite{Zohdy2019}}.
+perspectives\footnote{\label{Zohdy19}\shortfullcite{Zohdy2019}\hspace{-0.8em}}.
 As gene flow decreases between habitat fragments, the populations inhabiting
 them will begin to diverge due to mutations and genetic drift.
 In addition, the lack of gene flow allows mammalian hosts, obligate
@@ -277,7 +298,7 @@ preparing to re-submit this proposal in November.
 Gideon Bradburd and colleagues recently introduced a method that uses genomic
 data to assign individuals to populations while simultaneously accounting for
 continuous patterns of genetic variation across a
-landscape\footnote{\label{Bradburd18}\shortfullcite{Bradburd2018}}.
+landscape\footnote{\label{Bradburd18}\shortfullcite{Bradburd2018}\hspace{-0.8em}}.
 This was an important step forward from methods that ignored continuous spatial
 genetic differentiation.
 However, their model assumes that the allele frequencies in each population
