@@ -8,7 +8,7 @@
 \evensidemargin = 0.0 in
 \topmargin = -0.5 in
 \headheight = 0.35 in
-\headsep = 0.15 in
+\headsep = 0.1 in
 \topskip = 0 in
 \footskip = 0.5 in
 \pagenumbering{arabic}
@@ -34,6 +34,8 @@
 \usepackage{ifthen}
 \usepackage{wrapfig}
 \usepackage[para]{footmisc}
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
 
 %% Set up color palettes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Color palette GreenOrange_6 from
@@ -62,13 +64,13 @@
 % \usepackage[style=nature]{biblatex}
 \usepackage[bibstyle=bib/joaks-statement,
     maxcitenames=3,
-    mincitenames=2,
+    mincitenames=3,
     backend=biber,
     bibencoding=utf8,
     date=year]{biblatex}
 
 % \newrobustcmd*{\shortfullcite}{\AtNextCite{\renewbibmacro{title}{}\renewbibmacro{in:}{}\renewbibmacro{number}{}}\scriptsize\hspace{-0.9em}\fullcite}
-\newrobustcmd*{\shortfullcite}{\AtNextCite{\renewbibmacro{title}{}\renewbibmacro{in:}{}\renewbibmacro{number}{}}\hspace{-0.6em}\fullcite}
+\newrobustcmd*{\shortfullcite}{\AtNextCite{\renewbibmacro{eprint}{}\renewbibmacro{title}{}\renewbibmacro{in:}{}\renewbibmacro{number}{}}\hspace{-0.6em}\fullcite}
 
 \bibliography{references}
 
@@ -88,19 +90,19 @@
     {\large\sffamily\bfseries}
     {\S\ \thesection.}{.5em}{}[]
 \titlespacing{\section}
-    {0mm}{1.0ex plus .15ex minus .15ex}{0ex}
+    {0mm}{0.1ex plus .05ex minus .05ex}{0ex}
 
 \titleformat{\subsection}[hang]
     {\large\sffamily\itshape}
     {\S\ \thesection.}{.5em}{}[]
 \titlespacing{\subsection}
-    {0mm}{0.5ex plus .1ex minus .1ex}{0ex}
+    {0mm}{0.5ex plus .01ex minus .01ex}{0ex}
 
 \titleformat{\subsubsection}[runin]
     {\sffamily\bfseries}
-    {\S\ \thesection.}{.5em}{}[.---]
+    {\S\ \thesection.}{.5em}{}[---]
 \titlespacing{\subsubsection}
-    {\parindent}{0.5ex plus .1ex minus .1ex}{0ex}
+    {\parindent}{0ex}{0ex}
 
 %% Format list environments %%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
@@ -138,8 +140,10 @@
 {\end{enumerate}}
 
 %% Basic formatting and spacing %%%%%%%%%%%%%%%%%%%%%
-\setlength{\parindent}{0em}
-\setlength{\parskip}{0.5em}
+\frenchspacing
+% \setstretch{0.98}
+\setlength{\parindent}{0.25in}
+\setlength{\parskip}{0em}
 
 %% My functions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\ignore}[1]{}
@@ -149,6 +153,22 @@
 \newcommand{\dC}{\ensuremath{^\circ{\textrm{C}}}}
 \newcommand{\tableSubItem}{\addtolength{\leftskip}{1em} \labelitemi \xspace}
 \newcommand{\myHangIndent}{\hangindent=5mm}
+\newcommand{\eg}{\textit{e.g.}\xspace}
+\newcommand{\Eg}{\textit{E.g.}\xspace}
+\newcommand{\ie}{\textit{i.e.}\xspace}
+\newcommand{\Ie}{\textit{I.e.}\xspace}
+
+\newcommand{\ecoevolity}{ecoevolity\xspace}
+\newcommand{\Ecoevolity}{Ecoevolity\xspace}
+\newcommand{\revbayes}{RevBayes\xspace}
+\newcommand{\slim}{SLiM\xspace}
+
+\newcommand{\sarscov}{SARS-CoV-2\xspace}
+\newcommand{\covid}{COVID-19\xspace}
+
+\newcommand{\speciationrate}{\ensuremath{\lambda}\xspace}
+\newcommand{\burstrate}{\ensuremath{\lambda_{\beta}}\xspace}
+\newcommand{\extinctionrate}{\ensuremath{\mu}\xspace}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

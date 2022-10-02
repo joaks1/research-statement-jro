@@ -1,73 +1,41 @@
 % \textbf{\textit{What processes control the generation of biodiversity?}}
-\textbf{\textit{What processes are responsible for the generation and
-        distribution of biodiversity?}}
-Elucidating answers to this question, in its broadest sense, is the primary
-motivation of my research group.
-While research interests in my lab are diverse, our work is unified by
-% (1) benefiting from, and contributing to, the rich information housed in
-% biodiversity research collections
-% and
-% (2) using
-% (2) the use of
-using
+% My research group is motivated to
+\noindent
+The central themes motivating my research group are
+(1) better understanding the processes that generate the amazing biological
+diversity of our planet,
+and
+% (2) incorporating computational exercises into biology curricula to build 
+% intuition for evolutionary processes and better train the next generation of
+% computational biologists, and
+(2) integrating computational research into biology
+curricula\footnote{\label{Wright19}\shortfullcite{Wright2019}\hspace{-0.8em}},
+especially for historically excluded groups.
+% \textbf{\textit{What processes are responsible for the generation and
+%         distribution of biodiversity?}}
+% Elucidating answers to this question, in its broadest sense, is the primary
+% motivation of my research group.
+While research interests in my lab are diverse, our work is unified by using
 phylogenetics to infer and explicitly account for shared ancestry in our
-approaches to better understand processes of evolution and diversification.
-% To address this question, I use patterns of genetic variation within and among
-% natural populations to identify independent evolutionary lineages (i.e.,
-% species) and infer their demographic histories and relationships, testing for
-% patterns predicted by current ecological factors and historical events.
+approaches to better understand processes of evolution.
 We use a broad suite of methods in this endeavor, including
-%%%  Shared ancestry is a fundamental property of life.
-%%%  By providing a framework of accounting for the inherent
-%%%  % nonindependence
-%%%  % dependence
-%%%  covariation
-%%%  in biological data created by shared evolutionary history,
-%%%  phylogenetics is rapidly becoming the statistical foundation of comparative
-%%%  biology.
-%%%  While research interests in my lab
-%%%  are very diverse,
-%%%  % span biogeography, speciation, and molecular and genome evolution,
-%%%  \textbf{\textit{all of our work is unified by our common goal of using
-%%%          phylogenetics to infer and explicitly account for shared ancestry in
-%%%          our approaches to better understand
-%%%          processes of evolution and biological diversification}}.
-%%%          % evolution and biodiversity}}.
-%%%  My lab uses a broad suite of methods in this endeavor, including
-% collection-based fieldwork,
-% fieldwork,
-% collecting genome-wide DNA sequence data via next-generation sequencing (NGS)
-% technologies,
-% next-generation sequencing (NGS),
-% high-throughput DNA sequencing,
-% collecting genomic data,
-field and lab work,
-developing statistical methods and associated software for inferring evolutionary history,
-% developing statistical procedures for inferring evolutionary history,
-% from genomic datasets,
-% developing software for implementing these methods,
-% implementing such methods in software,
-and ultimately applying these computational tools to genomic data to test
-% hypotheses about processes of evolution and diversification.
+field work,
+genomics,
+developing statistical methods and associated software for inferring
+evolutionary history, and ultimately applying these computational tools to
+genomic data to test
 hypotheses about processes that generate biodiversity.
-% Our work benefits from and contributes to biodiversity research collections.
-% Given the integrative nature of my research program, I seek to recruit students
-% with diverse backgrounds and interests.
-% The questions I am passionate about exploring are open-ended and require
-% critical thinking and creativity.
-% As a result, it is imperative that I involve students and collaborators with
-% diverse backgrounds and perspectives to bring together unique insights.
-The questions my lab explores are integrative, open-ended, and require critical
+The questions my lab explore are integrative, open-ended, and require critical
 thinking and creativity.
-As a result,
-% it is imperative that I involve
+% As a result,
 I strive to include students and collaborators with diverse backgrounds and
 perspectives to bring together unique insights.
 
 \section*{Previous Research}
-\subsubsection*{Climate-driven diversification}
-One question I am passionate about is whether Quaternary climatic oscillations
-promoted diversification by fragmenting the distributions of species.
+\subsubsection*{Genomic approaches to testing climate-driven diversification}
+A question I have been passionate about since graduate school is whether
+Quaternary climatic oscillations promoted diversification by fragmenting the
+distributions of species.
 An ideal system for addressing this question is the dynamic landscape of
 Southeast Asia, where many groups of islands coalesced during lower sea levels
 of glacial periods and were fragmented during interglacial rises in sea level.
@@ -76,54 +44,23 @@ It has often been assumed that this repeated fragmentation functioned as a
 If correct, this predicts that population divergences across islands fragmented
 by rising sea levels were temporally clustered around interglacial sea
 incursions.
-% To test this prediction, I compared the divergence times of inter-island
-% populations across 22 tetrapod taxa.
-To test this prediction, we collected DNA sequences to infer and compare the
-divergence times among 22 pairs of populations on islands that were connected
-during glacial periods.
-Using an existing approximate-Bayesian computation (ABC) method, we found very
-strong support
-% (posterior probability of 0.982)
-for a single, recent, simultaneous divergence event shared by all 22 taxa.
 
-Suspicious of such strong support given the richness and stochasticity of the
-model underlying the ABC method, I used computer simulations to confirm that
-the method often supports highly clustered models of divergence even when taxa
-diverged randomly over millions of years\footnote{\label{Oaks12}\shortfullcite{Oaks2012}\hspace{-0.8em}}.
-I formulated the evolutionary model underlying the simulation-based ABC
-procedure and, using first principles of probability, identified theoretical
-reasons the method would tend to spuriously infer simultaneous
-divergences\cref{Oaks12}.
-Guided by these insights, I developed a new model that avoids these theoretical
-pitfalls,
-implemented it in the software package
-\href{https://github.com/joaks1/dpp-msbayes}{dpp-msbayes},
-and developed a much more efficient 
-\href{https://joaks1.github.io/PyMsBayes/}{multi-processing interface}
-for this type of comparative phylogeographic inference.
-As predicted by theory, the new ABC method was more
-accurate\footnote{\label{Oaks14dpp}\shortfullcite{Oaks2014dpp}\hspace{-0.8em}}.
-However, the new approach also revealed that after reducing the sequence data
-into insufficient summary statistics, ABC approaches were left with little
-information to provide biological insights,
-which prevented us from evaluating the tenability of the climate-driven
-species-pump model of diversification.
-% project repo: https://github.com/joaks1/msbayes-experiments
-
-Motivated by my unsatisfied curiosity, I
-(1) developed a full-likelihood Bayesian method in the software package
-\href{http://phyletica.org/ecoevolity/}{ecoevolity}
-that can leverage all of the information from genomic data to infer
-co-divergences\footnote{\label{Oaks18ecoevolity}\shortfullcite{Oaks2018ecoevolity}\hspace{-0.8em}},
+To test this prediction, we
+(1) developed
+simulation\footnote{\label{Oaks14dpp}\shortfullcite{Oaks2014dpp}\hspace{-0.8em}}
 and
-(2) collected thousands of loci from across the genomes of geckos sampled from
-16 inter-island pairs of populations.
-The results strongly support that each pair of gecko populations diverged
-independently, refuting the predictions of the climate-driven species-pump
+likelihood-based\footnote{\label{Oaks18ecoevolity}\shortfullcite{Oaks2018ecoevolity}\hspace{-0.8em}}
+statistical methods for inferring shared evolutionary events from comparative
+genomic data, and
+(2) applied our methods to genomic data from geckos we sampled from 16 pairs of
+islands in the Philippines, many of which were connected during glacial
+periods.
+We found strong support that the pairs of gecko populations diverged
+independently,
+refuting the predictions of the climate-driven species-pump
 model\footnote{\label{Oaks18paic}\shortfullcite{Oaks2018paic}\hspace{-0.8em}};
-a result that makes sense in light of the life history and habitat
+a result that makes sense in light of the natural history and habitat
 preferences of these lizards.
-% project repo: https://github.com/phyletica/gekgo
 
 The entire arc of this line of inquiry was funded by the National Science
 Foundation (NSF)
@@ -134,13 +71,25 @@ and
 \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1656004}{1656004})
 and is a good example of my lab's willingness to derive and implement new
 models and computational approaches to interrogate questions that motivate us.
-I also documented our progress in all aspects of this work in open-science
-project repositories that can be found at
-\href{https://github.com/joaks1/msbayes-experiments}{github.com/joaks1/msbayes-experiments},
-\href{https://github.com/phyletica/ecoevolity-experiments}{github.com/phyletica/ecoevolity-experiments},
-and
-\href{https://github.com/phyletica/gekgo}{github.com/phyletica/gekgo}.
-
+Our full-likelihood model that can efficiently leverage information
+from genome-scale data was a step forward for biogeography.
+However,
+it is limited in two ways.
+First,
+by focusing on pairs of populations, it ignores the possibility of patterns of
+shared divergences across the ancestral history shared among the populations.
+To overcome this limitation, my research group is currently working on fully
+phylogenetic approaches to testing for temporally clustered divergences.
+Second, it assumes the natural history of organisms does not affect how they
+diversify, which is why my group is developing process-based evolutionary
+models that allow diversification dynamics to vary among lineages depending on
+their characteristics.
+% I also documented our progress in all aspects of this work in open-science
+% project repositories that can be found at
+% \href{https://github.com/joaks1/msbayes-experiments}{github.com/joaks1/msbayes-experiments},
+% \href{https://github.com/phyletica/ecoevolity-experiments}{github.com/phyletica/ecoevolity-experiments},
+% and
+% \href{https://github.com/phyletica/gekgo}{github.com/phyletica/gekgo}.
 
 %   Current work
     %   Generalizing Bayesian phylogenetics (NSF-funded)
@@ -166,50 +115,18 @@ and
 % lab, which, given my current position, is geared toward opportunities in the
 % United States.
 % However, if I were fortunate enough to join the
-% Department of Biology at the University of Victoria,
-% Natural History Museum of Denmark
-% Department of Biology
-% Department of Biosciences
-% at
-% Durham University,
-% at the
-% University of Copenhagen,
 % I am confident that the research summarized below would
 % be competitive for
-% funding opportunities in the United Kingdom and the
-% European Research Council.
-% funding opportunities in Denmark and from the
-% European Research Council.
-% Discovery Grants and other funding opportunities from the
-% NSERC of Canada.
+% funding opportunities in
 
 
-% Generally, my lab is developing and implementing novel evolutionary genetic
-% methods,
-% collecting genomic datasets from 
-%biodiverse regions of the planet,
-% diverse empirical systems,
-% and applying the former to the latter to
-% learn about processes of evolution and diversification.
-%across regions characterized by high levels of species richness and endemism.
-% Below I detail one such method, and three empirical systems that
-% have inspired its development.
-
-\subsubsection*{Generalizing Bayesian phylogenetics}
+\subsubsection*{Generalizing phylogenetics to infer shared evolutionary events}
 In phylogenetics, we have long made a limiting assumption about the processes
 that cause evolutionary lineages (whether they are genes or populations) to
-diversify: \textit{we assume these processes affect only one lineage and cause
-    it to leave only two descendants}.
+diversify: \textit{we assume divergences across the tree of life are independent}.
 Violations of this assumption are likely common and span many areas of biology,
 including biogeography, gene-family evolution, epidemiology, and symbiont
 coevolution.
-% In biogeography, if a landscape is fragmented into more than two fragments,
-% this could cause more than two lineages descending from a node, and also
-% the timing of the divergence could be shared across multiple co-distributed
-% taxa.
-% In genome evolution, if a region of a chromosome is duplicated that contains
-% multiple members of a gene family, there will be multiple, simultaneous
-% divergences in the evolutionary history of this gene family.
 Prior to our work, we
 lacked a statistical framework for testing the predictions of the
 diverse and interesting processes that violate this assumption.
@@ -219,8 +136,8 @@ we created such a framework by generalizing the space of phylogenies that is
 explored during Bayesian phylogenetic inference,
 allowing us to approximate the probability
 of patterns predicted by processes that cause nonindependent divergences 
-across the tree of life
-\footnote{\label{Oaks21phycoeval}\shortfullcite{Oaks2021phycoeval}\hspace{-0.8em}}.
+across the tree of
+life\footnote{\label{Oaks21phycoeval}\shortfullcite{Oaks2021phycoeval}\hspace{-0.8em}}.
 % By exploring the full space of phylogenies, we can approximate the probability
 % of patterns predicted by processes that cause nonindependent divergences 
 % across the tree of life.
@@ -228,116 +145,192 @@ across the tree of life
 % \href{http://phyletica.org/ecoevolity/}{ecoevolity}
 % and are currently testing it using simulations.
 
-One motivation for developing this new statistical phylogenetic framework, is
-our desire to test several long-standing biogeographical hypotheses to explain
-the distribution of the rich biodiversity across Southeast Asia.
-We are currently collecting genomic data from three genera of geckos that are
-co-distributed across much of this region.
-Our recent fieldwork in Indochina has added to our geographic sampling of these
-three genera, and will allow us to use our new methods to test for patterns
-predicted by processes of diversification across both mainland and insular
-Southeaset Asia.
-% To use this method to test several long-standing biogeographical
-% hypotheses across Southeast Asia,
-% we are currently collecting genomic data from several genera of geckos that are
+When we applied our generalized phylogenetic approach to comparative genomic data
+from two genera of geckos from across the Philippine Islands, we found support
+for shared and multifurcating divergences over the past 4 million years,
+as predicted by repeated fragmentation of the islands by interglacial rises
+in sea
+level\cref{Oaks21phycoeval}.
+Our findings confirmed the importance of looking beyond pairs of populations to
+their full ancestral history when testing for non-independent divergences.
+Our fully phylogenetic approach also opens the door to testing rates and
+patterns of divergence predicted by processes of interest across many fields of
+biology,
+enabling my lab group to explore new research directions in methods
+development, biogeography, and epidemiology.
+
+% One motivation for developing this new statistical phylogenetic framework, is
+% our desire to test several long-standing biogeographical hypotheses to explain
+% the distribution of the rich biodiversity across Southeast Asia.
+% We are currently collecting genomic data from three genera of geckos that are
 % co-distributed across much of this region.
-To make our approach more generally applicable to questions about biogeography,
-genome evolution, epidemiology, and coevolution,
-we are also porting our distributions and algorithms to the flexible
-statistical phylogenetic software package
-\href{https://revbayes.github.io/}{RevBayes}.
+% Our recent fieldwork in Indochina has added to our geographic sampling of these
+% three genera, and will allow us to use our new methods to test for patterns
+% predicted by processes of diversification across both mainland and insular
+% Southeaset Asia.
+% To make our approach more generally applicable to questions about biogeography,
+% genome evolution, epidemiology, and coevolution,
+% we are also porting our distributions and algorithms to the flexible
+% statistical phylogenetic software package
+% \href{https://revbayes.github.io/}{RevBayes}.
 
-\subsubsection*{Generalizing the birth-death process}
-We have developed the theory and computational machinery to explore
-the full space of phylogenetic trees, but due to the lack
-of biologically inspired mechanistic models whose distribution covers
-this space, we are currently resigned to use phenomenological models
-to represent our \emph{a priori} assumptions.
-To remediate this limitation, my lab is working in collaboration with Sebastian
-H{\"o}hna on generalizing the birth-death process to allow the nonindependence
-of divergence times across a phylogeny.
-To fund this work, we are preparing a proposal for the Systematics and
-Biodiversity Science Cluster at the NSF DEB. 
+\subsubsection*{A generalized, trait-based, birth-death process}
+My lab group is currently collaborating with Sebastian H\"ohna to develop a
+generalized, state-dependent birth-death (BD) process, which we call the
+birth-death-burst (BDB) process, to create a process-inspired
+phylogenetic framework to infer rates and patterns of co-diversification.
+To relax the assumption of independent bifurcating divergences, we extended the
+BD process to include a variable number of ``burst'' events through time that
+occur at rate $\burstrate$, while other divergences occur
+at rate $\speciationrate$.
+This process-based approach will allow us to learn about biologically
+meaningful macroevolutionary parameters that govern processes of
+diversification.
+For example, to enable researchers to explicitly test whether the
+macroevolutionary parameters of the BDB model vary based on the characteristics
+of lineages, we are working to extend the BDB model to allow different
+\speciationrate and \burstrate parameters depending on the traits of the
+evolving lineages. 
+% To determine the set of trait-based models that best explain the data, we will
+% use Bayesian model averaging via reversible-jump Markov chain Monte Carlo.
+Additional funding for this work is included in my pending NSF CAREER
+proposal.
 
-\subsubsection*{Improving phylogenetics with genomic data}
-By analytically integrating over the evolutionary history of individual loci,
-my lab's software
-\href{http://phyletica.org/ecoevolity/}{ecoevolity}
-can infer phylogenies from millions of sites from across the genomes sampled
-from natural populations.
-However, as the number of taxa (and thus the size of the phylogeny) increases,
-the method becomes computationally expensive.
-There are a number of ways that we plan to extend this method to accommodate
-larger phylogenies, including
-(1) analytically integrating the population sizes along the tree to
-avoid having to sample them with computationally expensive algorithms,
-(2) analytically integrating variation in the rate of substitution
-across the tree to relax the assumption of a strict ``molecular clock'' while
-minimizing computational burden,
-and
-(3) limiting the size of the state space that needs to be considered when
-calculating the likelihood toward the root of the tree.
-These advances are imperative for inferring large phylogenies from genomic data
-while explicitly accounting for the variation in evolutionary history across
-chromosomes.
-% We will continue to seek funds from NSF to support this work.
-We will continue to seek extramural funds to support this work.
+\subsubsection*{Integrating simulation-based research into prison STEM education}
+            % Integrate coding-to-learn exercises into the evolution
+            % course I teach at Alabama prisons that will culminate with the
+            % students designing simulations to ``stress test'' the BDB method.
 
-\subsubsection*{An evolutionary approach to emerging infectious diseases}
-Globally, the association between habitat fragmentation and the emergence of
-zoonotic infectious diseases in human populations has motivated research into
-the ecological processes responsible for this pattern.
-Sarah Zohdy, Tonia Schwartz, and I have proposed an evolutionary mechanism for
-this pattern that can complement ecological
-perspectives\footnote{\label{Zohdy19}\shortfullcite{Zohdy2019}\hspace{-0.6em}}.
-As gene flow decreases between habitat fragments, the populations inhabiting
-them will begin to diverge due to mutations and genetic drift.
-In addition, the lack of gene flow allows mammalian hosts, obligate
-ectoparasites, and pathogens within each fragment to coevolve largely
-independently.
-The neutral divergence among fragments, combined with the decoupling of
-coevolutionary selective pressures, can cause the overall genetic
-diversity of pathogens across the landscape to rapidly increase,
-which raises the chances of pathogen variants with zoonotic potential.
-We are working on testing this model using mouse lemurs, lice, and viruses in
-Madagascar.
-We received favorable reviews of our proposal to the NSF Ecology and Evolution
-of Infectious Diseases (EEID) program,
-% in Fall 2017,
-and are currently preparing to re-submit this proposal. % in November.
+Adult prisoners are among the most underserved populations in this
+country,
+but evidence suggests that society as a whole has much to gain from prisoners
+receiving a quality education \cite{Vacca2004}.
+Since 2017, members of my research group and I have taught evolutionary biology
+to students incarcerated in Alabama correctional facilities (please see
+teaching statement).
+These facilities restrict the technology we can take into the classroom, which
+has prevented us from using computers to teach our students.
+To get around this challenge, we have obtained approval to allow students to use
+single-board computers in prison classrooms.
+% These are small, inexpensive, and can be purchased without
+% a housing and wireless connectivity,
+% which is key to getting facilities to approve their use, because they cannot be
+% used to hide contraband or connect to networks.
+This will enable us to teach the students computer skills and use
+coding-to-learn exercises to help them gain more intuition for how processes of
+evolution work and interact.
+A major learning objective of these computational exercises is to understand
+how microevolutionary processes give rise to macroevolutionary patterns of
+biological diversity.
 
-% \subsubsection*{Diversification in West-Central African rainforests}
-% I am working with Adam Leach\'{e} and Matthew Fujita to apply the novel
-% statistical methods to comparative genomic datasets to elucidate the historical
-% processes of diversification and community assembly across West-Central African
-% rainforests.
-% We are particularly interested in determining how Pliocene and Pleistocene
-% aridification cycles and associated rainforest fragmentation influenced
-% diversification across the Afro-tropics.
+The coding exercises will culminate in a capstone activity toward the end of
+the 14-week course, when the students will design evolutionary scenarios and
+write code to simulate genetic data under them.
+Their forward-time simulations will begin with a single ancestral species
+that gives rise to a clade of descendants, only some of which
+will survive.
+At this stage in the course, the students will be familiar with
+micro and macroevolutionary processes and exploring their behavior
+with simulations.
+The emphasis will be on fun and creativity in designing any kind of scenario
+or sets of scenarios they wish.
+Outside of class, we will apply the BDB model
+to the datasets generated under the students' models.
+During the last week of class, we will bring the results to show them how well
+our approach did at inferring the evolutionary histories they created.
+
+The evolutionary scenarios the students design using
+a forward-time, population-genetics simulator
+like \slim will be very far removed from the assumptions
+of the macroevolutionary BDB model.
+As a result, the data generated under the students' models will be a good proxy
+for real, biological data.
+If the BDB model performs well on these data, we, and other scientists, can be
+more confident in the inferences it makes from real data.
+This level of ``stress-testing'' methods is rarely done in biology, and will
+provide a very important assessment of our new methods' behavior.
+Inclusion in cutting-edge research in computational biology will not only help
+teach our students about evolutionary biology, but also the process of science.
+All of our students will be co-authors on the papers that present the results
+of these simulation-based analyses.
+I am currently seeking funding for this work as part of my pending NSF CAREER
+proposal.
+I am also working on similar approaches to incorporating computational
+biology research into undergraduate and graduate courses, and am
+confident these activities can attract funding from programs at the NSF and NIH
+that emphasize education and training.
 
 
-% \section*{Future Research}
+\subsubsection*{Estimating the impact of super-spreading events on \covid}
+Understanding the role of social gatherings in spreading infectious disease
+has important health implications for both humans and wildlife.
+Multiple transmissions of a pathogen at a large gathering leave distinct
+patterns of shared divergences in the phylogenetic history of the pathogen.
+Given data on sequences and the time samples are collected, our BDB method will
+enable us to estimate the rate of transmissions at social events (\ie, shared
+divergences; \burstrate) relative to the rate of individual transmissions
+(\speciationrate),
+providing a proxy for the relative importance of social gatherings
+in the spread of a pathogen.
 
-\subsubsection*{Bringing phylogenetics into the inference of population structure}
-Gideon Bradburd and colleagues recently introduced a method that uses genomic
-data to assign individuals to populations while simultaneously accounting for
-continuous patterns of genetic variation across a
-landscape\footnote{\label{Bradburd18}\shortfullcite{Bradburd2018}\hspace{-0.8em}}.
-This was an important step forward from methods that ignored continuous spatial
-genetic differentiation.
-However, their model assumes that the allele frequencies in each population
-have drifted away from an ancestral population independently of one another
-(i.e., ignoring shared ancestry among the populations).
-Gideon and I are working on extending the method implemented in conStruct
-to simultaneously infer
-(1) the population assignment of each individual's genome (allowing their
-genomes to be admixed),
-(2) spatial genetic differentiation within each population, and
-(3) the phylogenetic relationships of the populations.
-We are planning to submit a proposal to the NSF DEB
-% Systematics and Biodiversity Science Cluster
-Evolutionary Processes Cluster
-to fund this work.
+To jointly infer the \sarscov phylogeny, shared divergences,
+and macroevolutionary parameters,
+we will analyze regional sequence and sample-time data with the
+state-dependent BDB model we are developing in the software package \revbayes.
+From the posterior samples of regional analyses, we will summarize the rate of
+shared divergences across windows of time to quantify the effect of holidays
+on the spread of the virus at social gatherings.
+To test whether there are differences in the rate of spread via social
+gatherings among the named variants of \sarscov,
+we will use Bayes factors to compare the probability of strain-dependent to
+strain-independent BDB models.
+To validate the applicability of the BDB model to epidemiology,
+we will determine whether it can identify shared divergences when applied to
+\sarscov datasets from epidemiologically validated super-spreading events.
+I am seeking funding for this work from the NSF as part of my pending CAREER
+proposal, and am working on a proposal for an R21 award from the NIH.
+% Investigator Initiated Research in Computational Genomics and Data Science
+
+
+% \subsubsection{Diversification of geckos across Southeast Asia}
+% One motivation for developing the BDB model is to improve our understanding of
+% how large-scale changes in geography affect diversification, a primary goal of
+% biogeography.
+% A major gap in our understanding of biogeography is how these processes
+% interact with the ecology of organisms in generating patterns of biological
+% diversity.
+% To begin filling this gap,
+% my research group will
+% apply our BDB model to genomic data from
+% hundreds of bent-toed geckos (\spp{Cyrtodactylus}) from
+% across Southeast Asia
+% to test whether
+% biogeographical processes
+% have affected lineages differently, depending on their habitat preferences.
+
+% I have a pending NSF CAREER proposal to fund this work
+
+
+% \subsubsection*{Bringing phylogenetics into the inference of population structure}
+% Gideon Bradburd and colleagues recently introduced a method that uses genomic
+% data to assign individuals to populations while simultaneously accounting for
+% continuous patterns of genetic variation across a
+% landscape\footnote{\label{Bradburd18}\shortfullcite{Bradburd2018}\hspace{-0.8em}}.
+% This was an important step forward from methods that ignored continuous spatial
+% genetic differentiation.
+% However, their model assumes that the allele frequencies in each population
+% have drifted away from an ancestral population independently of one another
+% (i.e., ignoring shared ancestry among the populations).
+% Gideon and I are working on extending the method implemented in conStruct
+% to simultaneously infer
+% (1) the population assignment of each individual's genome (allowing their
+% genomes to be admixed),
+% (2) spatial genetic differentiation within each population, and
+% (3) the phylogenetic relationships of the populations.
+% We are planning to submit a proposal to the NSF DEB
+% % Systematics and Biodiversity Science Cluster
+% Evolutionary Processes Cluster
+% to fund this work.
 
 
     %   Continued refinement of testing for shared divergences
