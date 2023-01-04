@@ -9,19 +9,24 @@ and
 % intuition for evolutionary processes and better train the next generation of
 % computational biologists, and
 (2) integrating computational research into biology
-curricula\footnote{\label{Wright19}\shortfullcite{Wright2019}\hspace{-0.8em}},
-especially for students from historically excluded groups.
+curricula\footnote{\label{Wright19}\shortfullcite{Wright2019}\hspace{-0.8em}}.
+% especially for students from historically excluded groups.
 % \textbf{\textit{What processes are responsible for the generation and
 %         distribution of biodiversity?}}
 % Elucidating answers to this question, in its broadest sense, is the primary
 % motivation of my research group.
-While research interests in my lab are diverse, our work is unified by using
+While research interests in my lab are diverse, our work is unified by
+using
+% our
+% passion for organismal biology and
+% use of
 phylogenetics to infer and explicitly account for shared ancestry in our
 approaches to better understand processes of evolution.
-We use a broad suite of methods in this endeavor, including
+We integrate many methods in this endeavor, including
+% collection-based
 field work,
 genomics,
-developing statistical methods and associated software for inferring
+developing statistical methods and software for inferring
 evolutionary history, and ultimately applying these computational tools to
 genomic data to test
 hypotheses about processes that generate biodiversity.
@@ -71,7 +76,7 @@ and
 \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=1656004}{1656004})
 and is a good example of my lab's willingness to derive and implement new
 models and computational approaches to interrogate questions that motivate us.
-Our full-likelihood model that can efficiently leverage information
+Our full-likelihood model that efficiently uses information
 from genome-scale data was a step forward for biogeography.
 However,
 it is limited in two ways.
@@ -175,93 +180,28 @@ development, biogeography, and epidemiology.
 % \href{https://revbayes.github.io/}{RevBayes}.
 
 \subsubsection*{A generalized, trait-based, birth-death process}
-My lab group is currently collaborating with Sebastian H\"ohna to develop a
+To create a process-inspired phylogenetic framework to infer rates and patterns
+of co-diversification,
+my lab group is collaborating with Sebastian H\"ohna to develop a
+% My lab group is currently developing a
 generalized, state-dependent birth-death (BD) process, which we call the
-birth-death-burst (BDB) process, to create a process-inspired
-phylogenetic framework to infer rates and patterns of co-diversification.
+birth-death-burst (BDB) process.
 To relax the assumption of independent bifurcating divergences, we extended the
-BD process to include a variable number of ``burst'' events through time that
+BD process to include a variable number of ``bursts'' of shared divergences through time that
 occur at rate $\burstrate$, while other divergences occur
 at rate $\speciationrate$.
-This process-based approach will allow us to learn about biologically
+% This process-based approach enables us to learn about biologically
+This enables researchers to learn about biologically
 meaningful macroevolutionary parameters that govern processes of
 diversification.
-For example, to enable researchers to explicitly test whether the
-macroevolutionary parameters of the BDB model vary based on the characteristics
-of lineages, we are working to extend the BDB model to allow different
-\speciationrate and \burstrate parameters depending on the traits of the
-evolving lineages. 
+For example, to test whether macroevolutionary processes effect
+lineages differently based on their characteristics, the BDB model will allow
+different \speciationrate and \burstrate parameters depending on the traits of
+the evolving lineages. 
 % To determine the set of trait-based models that best explain the data, we will
 % use Bayesian model averaging via reversible-jump Markov chain Monte Carlo.
 Additional funding for this work is included in my pending NSF CAREER
 proposal.
-
-\subsubsection*{Integrating simulation-based research into prison STEM education}
-            % Integrate coding-to-learn exercises into the evolution
-            % course I teach at Alabama prisons that will culminate with the
-            % students designing simulations to ``stress test'' the BDB method.
-
-Adult prisoners are among the most underserved populations in this
-country,
-but evidence suggests that society as a whole has much to gain from prisoners
-receiving a quality education \cite{Vacca2004}.
-Since 2017, members of my research group and I have taught evolutionary biology
-to students incarcerated in Alabama correctional facilities (please see
-teaching statement).
-These facilities restrict the technology we can take into the classroom, which
-has prevented us from using computers to teach our students.
-To get around this challenge, we have obtained approval to allow students to use
-single-board computers in prison classrooms.
-% These are small, inexpensive, and can be purchased without
-% a housing and wireless connectivity,
-% which is key to getting facilities to approve their use, because they cannot be
-% used to hide contraband or connect to networks.
-This will enable us to teach the students computer skills and use
-coding-to-learn exercises to help them gain more intuition for how processes of
-evolution work and interact.
-A major learning objective of these computational exercises is to understand
-how microevolutionary processes give rise to macroevolutionary patterns of
-biological diversity.
-
-The coding exercises will culminate in a capstone activity toward the end of
-the 14-week course, when the students will design evolutionary scenarios and
-write code to simulate genetic data under them.
-Their forward-time simulations will begin with a single ancestral species
-that gives rise to a clade of descendants, only some of which
-will survive.
-At this stage in the course, the students will be familiar with
-micro and macroevolutionary processes and exploring their behavior
-with simulations.
-The emphasis will be on fun and creativity in designing any kind of scenario
-or sets of scenarios they wish.
-Outside of class, we will apply the BDB model
-to the datasets generated under the students' models.
-During the last week of class, we will bring the results to show them how well
-our approach did at inferring the evolutionary histories they created.
-
-The evolutionary scenarios the students design using
-a forward-time, population-genetics simulator
-% like \slim
-will be far removed from the assumptions
-of the macroevolutionary BDB model.
-As a result, the data generated under the students' models will be a good proxy
-for real, biological data.
-If the BDB model performs well on these data, we, and other scientists, can be
-more confident in the inferences it makes from real data.
-This level of ``stress-testing'' methods is rarely done in biology, and will
-provide an important assessment of our new methods' behavior.
-Including out students in
-cutting-edge research in computational biology will not only help
-teach them about evolutionary biology, but also the process of science.
-All of our students will be co-authors on the papers that present the results
-of these simulation-based analyses.
-I am currently seeking funding for this work as part of my pending NSF CAREER
-proposal.
-I am also working on similar approaches to incorporating computational
-biology research into undergraduate and graduate courses, and am
-confident these activities can attract funding from programs at the NSF and NIH
-that emphasize education and training.
-
 
 \subsubsection*{Estimating the impact of super-spreading events on \covid}
 Understanding the role of social gatherings in spreading infectious disease
@@ -294,23 +234,194 @@ proposal, and am working on a proposal for an R21 award from the NIH.
 % Investigator Initiated Research in Computational Genomics and Data Science
 
 
-% \subsubsection{Diversification of geckos across Southeast Asia}
-% One motivation for developing the BDB model is to improve our understanding of
-% how large-scale changes in geography affect diversification, a primary goal of
-% biogeography.
-% A major gap in our understanding of biogeography is how these processes
-% interact with the ecology of organisms in generating patterns of biological
-% diversity.
-% To begin filling this gap,
-% my research group will
-% apply our BDB model to genomic data from
-% hundreds of bent-toed geckos (\spp{Cyrtodactylus}) from
-% across Southeast Asia
-% to test whether
-% biogeographical processes
-% have affected lineages differently, depending on their habitat preferences.
+\subsubsection*{Diversification of geckos across Southeast Asia}
+One motivation for developing the BDB model is to improve our understanding of
+how large-scale changes in geography affect diversification, a primary goal of
+biogeography.
+A major gap in our understanding of biogeography is how these processes
+interact with the ecology of organisms in generating patterns of biological
+diversity.
+To begin filling this gap,
+my research group will
+apply our BDB model to genomic data from
+hundreds of bent-toed geckos (\textit{Cyrtodactylus}) from
+across Southeast Asia
+to test whether
+biogeographical processes
+have affected lineages differently, depending on their habitat preferences.
 
-% I have a pending NSF CAREER proposal to fund this work
+Southeast Asia has a dynamic geological history, including uplift and
+subsequent erosion of marine sediments from the tectonic collision of the
+Indian Subcontinent.
+% over the last 25 million years.
+% \cite{Rohling1998,Voris2000,Woodruff2003,deBruyn2004,Naish2009,Woodruff2010}.
+Comprising
+% $\approx380$
+more than 380
+species that span nearly all of South and Southeast
+Asia,
+bent-toed geckos (\textit{Cyrtodactylus}) are an ideal system for studying
+the effects of this region's dynamic landscape on the generation of
+biodiversity.
+\textit{Cyrtodactylus} are ecologically diverse, ranging from generalists
+to species highly adapted to at least 10 microhabitats.
+% \cite{Grismer2021diversity}.
+Karst specificity evolved at least 24 times and currently
+accounts for 25\% of the species in the genus,
+% \cite{Grismer2021diversity},
+suggesting a higher rate of diversification in karst-specific
+lineages, especially considering that limestone karst comprises a tiny fraction
+of the landscape of South and Southeast Asia.
+Compared to other habitat preferences,
+karst-specific \textit{Cyrtodactylus} species show remarkable levels
+of microendemism, with many species being restricted to a single
+karst formation.
+% \cite{Grismer2021diversity,Grismer2020ee,Grismer2020salweencyrts,Grismer2018}.
+We hypothesize the high levels of diversity and endemism of karst-specific
+species was caused by the rapid fragmentation of limestone karst
+habitat following its uplift.
+% \cite{Gillieson2005,Price2014,Sholihah2021}.
+% Examples of such fragmentations include the establishment and changes in course
+% of major river systems
+% (\eg, Ayeyarwady, Chiang Mai, Mekong, Red, and Salween)
+% that carved through and isolated limestone karst formations.
+% Such large-scale processes would have affected multiple gecko lineages, causing
+% shared divergences.
+If this explanation is correct, karst-adapted lineages should have higher rates
+of shared divergences (\burstrate) compared to geckos living in other habitats.
+Funding for this work is included in my pending NSF CAREER proposal.
+
+% \subsubsection*{Integrating simulation-based research into prison STEM education}
+%             % Integrate coding-to-learn exercises into the evolution
+%             % course I teach at Alabama prisons that will culminate with the
+%             % students designing simulations to ``stress test'' the BDB method.
+
+% % Adult prisoners are among the most underserved populations in this
+% % country,
+% % but evidence suggests that society as a whole has much to gain from prisoners
+% % receiving a quality education \cite{Vacca2004}.
+% My lab group is strongly committed to providing educational opportunities to
+% the most underserved population in this country, incarcerated people.
+% Since 2017, members of my research group and I have taught evolutionary and
+% organismal biology to students incarcerated in Alabama correctional facilities
+% (please see teaching statement).
+% These facilities restrict the technology we can take into the classroom, which
+% has prevented us from using computers to teach our students.
+% To get around this challenge, we have obtained approval to allow students to use
+% single-board computers in prison classrooms.
+% % These are small, inexpensive, and can be purchased without
+% % a housing and wireless connectivity,
+% % which is key to getting facilities to approve their use, because they cannot be
+% % used to hide contraband or connect to networks.
+% This will enable us to teach the students computer skills and use
+% coding-to-learn exercises to help them gain intuition for how processes of
+% evolution work and interact.
+% A major learning objective of these computational exercises is to understand
+% how microevolutionary processes give rise to macroevolutionary patterns of
+% biological diversity.
+
+% The coding exercises will culminate in a capstone activity
+% toward the end of the 14-week course,
+% when the students design evolutionary scenarios and write code to simulate
+% genetic data under them.
+% Their
+% % forward-time
+% simulations will begin with a single ancestral species
+% that gives rise to a clade of descendants.
+% % only some of which will survive.
+% At this stage in the course, the students will be familiar with
+% micro and macroevolutionary processes and exploring their behavior
+% with simulations.
+% The emphasis will be on fun and creativity in designing their unique scenario
+% or sets of scenarios.
+% Outside of class, we will apply the BDB model
+% to the datasets generated under the students' models.
+% During the last week of class, we will bring the results to show them how well
+% our approach did at inferring the evolutionary histories they created.
+
+% The evolutionary scenarios the students design
+% % using a forward-time, population-genetics simulator
+% % like \slim
+% will be far removed from the assumptions
+% of the macroevolutionary BDB model,
+% making the simulated data a good proxy for real biological data.
+% % As a result, the data generated under the students' models will be a good proxy
+% % for real, biological data.
+% If the BDB model performs well on these data, we, and other scientists, can be
+% more confident in the inferences it makes from real data.
+% % This level of ``stress-testing'' methods is rarely done in biology, and will
+% % provide an important assessment of our new methods' behavior.
+% Including our students in
+% cutting-edge research in computational biology will not only help
+% teach them about evolutionary biology, but also the process of science.
+% All of our students will be co-authors on the papers that present the results
+% of these simulation-based analyses.
+% I am currently seeking funding for this work as part of my pending NSF CAREER
+% proposal.
+% I am also working on similar approaches to incorporating computational
+% biology research into undergraduate and graduate courses, and am
+% confident these activities can attract funding from programs at the NSF and NIH
+% that emphasize education and training.
+
+\subsubsection*{Integrating computational research into biology classrooms}
+            % Integrate coding-to-learn exercises into the evolution
+            % course I teach at Alabama prisons that will culminate with the
+            % students designing simulations to ``stress test'' the BDB method.
+
+% Adult prisoners are among the most underserved populations in this
+% country,
+% but evidence suggests that society as a whole has much to gain from prisoners
+% receiving a quality education \cite{Vacca2004}.
+My lab group is strongly committed to integrating computational biology
+research into undergraduate evolution courses.
+Our goal is to teach students basic computational skills and use
+coding-to-learn exercises to help them gain intuition for how processes of
+evolution work and interact.
+A major learning objective of these computational exercises is to understand
+how microevolutionary processes give rise to macroevolutionary patterns of
+biological diversity.
+The coding exercises we are designing will culminate with a capstone activity
+toward the end of the course, when the students design evolutionary scenarios
+and write code to simulate genetic data under them.
+Their
+% forward-time
+simulations will begin with a single ancestral species
+that gives rise to a clade of descendants.
+% only some of which will survive.
+At this stage in the course, the students will be familiar with
+micro and macroevolutionary processes and exploring their behavior
+with simulations.
+The emphasis will be on fun and creativity in designing their unique scenario
+or sets of scenarios.
+Outside of class, we will apply the BDB model
+to the datasets generated under the students' models.
+During the last week of class, we will bring the results to show them how well
+our approach did at inferring the evolutionary histories they created.
+
+The evolutionary scenarios the students design
+using a forward-time, population-genetics simulator
+% like \slim
+will be far removed from the assumptions
+of the macroevolutionary BDB model,
+making the simulated data a good proxy for real biological data.
+% As a result, the data generated under the students' models will be a good proxy
+% for real, biological data.
+If the BDB model performs well on these data, we, and other scientists, can be
+more confident in the inferences it makes from real data.
+% This level of ``stress-testing'' methods is rarely done in biology, and will
+% provide an important assessment of our new methods' behavior.
+Including our students in
+cutting-edge research in computational biology will not only help
+teach them about evolutionary biology, but also the process of science.
+All of our students will be co-authors on the papers that present the results
+of these simulation-based analyses.
+I am currently seeking funding for this work as part of my pending NSF CAREER
+proposal.
+% I am also working on similar approaches to incorporating computational biology
+% research into other undergraduate and graduate courses, and am confident these
+% activities can attract funding from programs at the NSF and NIH that emphasize
+% education and training.
+
 
 
 % \subsubsection*{Bringing phylogenetics into the inference of population structure}
